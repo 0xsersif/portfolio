@@ -1,0 +1,3 @@
+[submodule "my-portfolio/themes/congo"]
+	path = my-portfolio/themes/congo
+	url = https://github.com/jpanther/congo.git
