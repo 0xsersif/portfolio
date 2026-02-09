@@ -1,0 +1,41 @@
+baseURL = 'https://0xmuler.github.io/'
+languageCode = 'en-gb'
+title = '0xMuler // ML Engineer & AI Builder'
+theme = 'congo'
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  author.name = '0xMuler'
+  author.bio = 'ML Engineer building production AI systems. Specializing in MLOps, LLM engineering, and end-to-end ML pipelines.'
+  colorScheme = 'dark'
+  defaultAppearance = 'dark'
+  enableSearch = true
+  enableCodeCopy = true
+  
+[params.homepage]
+  layout = 'profile'
+  showRecent = true
+  recentLimit = 6
+
+[menu]
+  [[menu.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 10
+  [[menu.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 20
+  [[menu.main]]
+    name = 'Philosophy'
+    pageRef = '/philosophy'
+    weight = 30
+
+[markup]
+  [markup.highlight]
+    style = 'dracula'
+
+

@@ -1,0 +1,736 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en-gb"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Development Philosophy & MLOps Practices &middot; 0xMuler // ML Engineer & AI Builder</title>
+    <meta name="title" content="Development Philosophy & MLOps Practices &middot; 0xMuler // ML Engineer & AI Builder" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.b03e5259dac2760f0e3006bed7d970a363f24345198646bec6dbd9d2fb966a12.css"
+    integrity="sha256-sD5SWdrCdg8OMAa&#43;19lwo2PyQ0UZhka&#43;xtvZ0vuWahI="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.167efd96c29259046e711c52c0db66536f497aad73a774cd6f28fc408f2d2688.js"
+      integrity="sha256-Fn79lsKSWQRucRxSwNtmU29Jeq1zp3TNbyj8QI8tJog="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      My approach to building production ML systems and shipping quality code
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/philosophy/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/philosophy/">
+  <meta property="og:site_name" content="0xMuler // ML Engineer & AI Builder">
+  <meta property="og:title" content="Development Philosophy & MLOps Practices">
+  <meta property="og:description" content="My approach to building production ML systems and shipping quality code">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Development Philosophy & MLOps Practices">
+  <meta name="twitter:description" content="My approach to building production ML systems and shipping quality code">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "0xsersif \/\/ ML Engineer \u0026 AI Builder",
+    "name": "Development Philosophy \u0026 MLOps Practices",
+    "headline": "Development Philosophy \u0026 MLOps Practices",
+    "description": "My approach to building production ML systems and shipping quality code",
+    "abstract": "\u003ch1 id=\u0022development-philosophy\u0022 class=\u0022relative group\u0022\u003eDevelopment Philosophy \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#development-philosophy\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h1\u003e\u003ch2 id=\u0022i-build-production-ml-systems-and-i-ship\u0022 class=\u0022relative group\u0022\u003eI Build Production ML Systems and I Ship \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#i-build-production-ml-systems-and-i-ship\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cp\u003eMy philosophy centers on \u003cstrong\u003eproduction-first engineering\u003c\/strong\u003e, \u003cstrong\u003equantified impact\u003c\/strong\u003e, and \u003cstrong\u003eauthentic technical work\u003c\/strong\u003e.\u003c\/p\u003e\n\u003chr\u003e\n\u003ch2 id=\u0022production-first-move-beyond-notebooks\u0022 class=\u0022relative group\u0022\u003eProduction-First: Move Beyond Notebooks \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#production-first-move-beyond-notebooks\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003ch3 id=\u0022the-problem-with-ipynb-portfolios\u0022 class=\u0022relative group\u0022\u003eThe Problem with .ipynb Portfolios \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#the-problem-with-ipynb-portfolios\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h3\u003e\u003cp\u003e❌ \u003cstrong\u003eNotebooks are not production code\u003c\/strong\u003e\u003cbr\u003e\n❌ \u003cstrong\u003eNo structure, no tests, no deployment\u003c\/strong\u003e\u003cbr\u003e\n❌ \u003cstrong\u003eCan\u0026rsquo;t run in production environments\u003c\/strong\u003e\u003cbr\u003e\n❌ \u003cstrong\u003eRecruiters want to see real systems\u003c\/strong\u003e\u003c\/p\u003e",
+    "inLanguage": "en-gb",
+    "url" : "http:\/\/localhost:1313\/philosophy\/",
+    "author" : {
+      "@type": "Person",
+      "name": "0xMuler"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1020"
+  }
+  </script>
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "0xsersif Ml Engineer \u0026 Ai Builder",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "name": "Development Philosophy \u0026 Mlops Practices",
+       "position": 2
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="0xMuler" />
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >0xMuler // ML Engineer &amp; AI Builder</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/projects/"
+                  title="Projects"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Projects</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/philosophy/"
+                  title="Development Philosophy &amp; MLOps Practices"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Philosophy</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Development Philosophy & MLOps Practices
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 1</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h1 id="development-philosophy" class="relative group">Development Philosophy <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#development-philosophy" aria-label="Anchor">#</a></span></h1><h2 id="i-build-production-ml-systems-and-i-ship" class="relative group">I Build Production ML Systems and I Ship <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#i-build-production-ml-systems-and-i-ship" aria-label="Anchor">#</a></span></h2><p>My philosophy centers on <strong>production-first engineering</strong>, <strong>quantified impact</strong>, and <strong>authentic technical work</strong>.</p>
+<hr>
+<h2 id="production-first-move-beyond-notebooks" class="relative group">Production-First: Move Beyond Notebooks <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#production-first-move-beyond-notebooks" aria-label="Anchor">#</a></span></h2><h3 id="the-problem-with-ipynb-portfolios" class="relative group">The Problem with .ipynb Portfolios <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-problem-with-ipynb-portfolios" aria-label="Anchor">#</a></span></h3><p>❌ <strong>Notebooks are not production code</strong><br>
+❌ <strong>No structure, no tests, no deployment</strong><br>
+❌ <strong>Can&rsquo;t run in production environments</strong><br>
+❌ <strong>Recruiters want to see real systems</strong></p>
+<h3 id="the-solution-structured-repos" class="relative group">The Solution: Structured Repos <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-solution-structured-repos" aria-label="Anchor">#</a></span></h3><p>✅ <strong>Python modules</strong> with proper imports<br>
+✅ <strong>FastAPI/Flask</strong> for inference APIs<br>
+✅ <strong>Docker</strong> for reproducible environments<br>
+✅ <strong>CI/CD</strong> pipelines with GitHub Actions<br>
+✅ <strong>Tests</strong> with pytest (&gt;80% coverage)<br>
+✅ <strong>Monitoring</strong> with MLflow, W&amp;B</p>
+<p><strong>Example Structure</strong>:</p>
+<pre tabindex="0"><code>ml-project/
+├── src/
+│   ├── data/
+│   ├── models/
+│   ├── api/
+│   └── utils/
+├── tests/
+├── Dockerfile
+├── requirements.txt
+├── .github/workflows/
+└── README.md
+</code></pre><hr>
+<h2 id="live-demos-are-mandatory" class="relative group">Live Demos are Mandatory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#live-demos-are-mandatory" aria-label="Anchor">#</a></span></h2><h3 id="why-demos-matter" class="relative group">Why Demos Matter <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#why-demos-matter" aria-label="Anchor">#</a></span></h3><p>Recruiters and hiring managers <strong>don&rsquo;t have time</strong> to clone repos and run code. Live demos prove:</p>
+<ul>
+<li>Your code actually works</li>
+<li>You can deploy to production</li>
+<li>You understand DevOps/MLOps</li>
+</ul>
+<h3 id="deployment-platforms" class="relative group">Deployment Platforms <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#deployment-platforms" aria-label="Anchor">#</a></span></h3><p>🚀 <strong>Hugging Face Spaces</strong> — For LLM/NLP projects<br>
+🚀 <strong>Streamlit Cloud</strong> — For dashboards and demos<br>
+🚀 <strong>AWS/GCP</strong> — For scalable production systems<br>
+🚀 <strong>Docker Hub</strong> — Containerized applications<br>
+🚀 <strong>GitHub Pages</strong> — Static sites and portfolios</p>
+<hr>
+<h2 id="quantified-impact-show-the-numbers" class="relative group">Quantified Impact: Show the Numbers <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#quantified-impact-show-the-numbers" aria-label="Anchor">#</a></span></h2><h3 id="bad-vague-claims" class="relative group">Bad: Vague Claims <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bad-vague-claims" aria-label="Anchor">#</a></span></h3><p>❌ &ldquo;Improved model performance&rdquo;<br>
+❌ &ldquo;Built a recommender system&rdquo;<br>
+❌ &ldquo;Optimized the pipeline&rdquo;</p>
+<h3 id="good-measurable-metrics" class="relative group">Good: Measurable Metrics <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#good-measurable-metrics" aria-label="Anchor">#</a></span></h3><p>✅ <strong>&ldquo;Reduced latency by 40%&rdquo;</strong> (800ms → 480ms)<br>
+✅ <strong>&ldquo;Improved F1-score by 15%&rdquo;</strong> (0.72 → 0.83)<br>
+✅ <strong>&ldquo;Saved $200k/year&rdquo;</strong> through inventory optimization<br>
+✅ <strong>&ldquo;5x faster inference&rdquo;</strong> on edge devices<br>
+✅ <strong>&ldquo;99.9% uptime&rdquo;</strong> over 3 months</p>
+<h3 id="business-impact" class="relative group">Business Impact <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#business-impact" aria-label="Anchor">#</a></span></h3><p>ML engineering is about <strong>solving real problems</strong>:</p>
+<ul>
+<li>Reduced costs</li>
+<li>Increased revenue</li>
+<li>Faster decisions</li>
+<li>Better user experience</li>
+</ul>
+<p>Always tie technical work to business outcomes.</p>
+<hr>
+<h2 id="real-world-data-no-clean-kaggle-datasets" class="relative group">Real-World Data: No Clean Kaggle Datasets <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#real-world-data-no-clean-kaggle-datasets" aria-label="Anchor">#</a></span></h2><h3 id="the-kaggle-trap" class="relative group">The Kaggle Trap <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-kaggle-trap" aria-label="Anchor">#</a></span></h3><p>Iris, Titanic, MNIST are <strong>overused and unrealistic</strong>:</p>
+<ul>
+<li>Pre-cleaned data</li>
+<li>Perfect labels</li>
+<li>No missing values</li>
+<li>No distribution shift</li>
+</ul>
+<h3 id="show-real-engineering-skills" class="relative group">Show Real Engineering Skills <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#show-real-engineering-skills" aria-label="Anchor">#</a></span></h3><p>✅ <strong>Web scraping</strong> — Collect raw data from APIs/websites<br>
+✅ <strong>Data cleaning</strong> — Handle missing values, outliers, duplicates<br>
+✅ <strong>Feature engineering</strong> — Domain knowledge → better features<br>
+✅ <strong>Label noise</strong> — Imperfect annotations, multiple annotators<br>
+✅ <strong>Imbalanced classes</strong> — Real datasets are skewed</p>
+<p><strong>Example</strong>: Instead of MNIST, scrape product images and build a classifier for e-commerce.</p>
+<hr>
+<h2 id="mlops-principles" class="relative group">MLOps Principles <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mlops-principles" aria-label="Anchor">#</a></span></h2><h3 id="end-to-end-ml-lifecycle" class="relative group">End-to-End ML Lifecycle <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#end-to-end-ml-lifecycle" aria-label="Anchor">#</a></span></h3><pre tabindex="0"><code>Data Collection → Preprocessing → Training → Evaluation
+        ↓                                       ↓
+    Versioning (DVC)                    Experiment Tracking (MLflow)
+                                                ↓
+                                        Model Registry
+                                                ↓
+                                    Deployment (Docker + K8s)
+                                                ↓
+                                    Monitoring &amp; Retraining
+</code></pre><h3 id="essential-mlops-tools" class="relative group">Essential MLOps Tools <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#essential-mlops-tools" aria-label="Anchor">#</a></span></h3><p><strong>Experiment Tracking</strong>:</p>
+<ul>
+<li>MLflow — Track runs, compare metrics</li>
+<li>Weights &amp; Biases (W&amp;B) — Visualizations, sweeps</li>
+</ul>
+<p><strong>Data Versioning</strong>:</p>
+<ul>
+<li>DVC — Git for data and models</li>
+<li>LakeFS — Git-like versioning for data lakes</li>
+</ul>
+<p><strong>Containerization</strong>:</p>
+<ul>
+<li>Docker — Package dependencies</li>
+<li>Docker Compose — Multi-service apps</li>
+</ul>
+<p><strong>CI/CD</strong>:</p>
+<ul>
+<li>GitHub Actions — Lint, test, deploy on push</li>
+<li>Jenkins / GitLab CI — Alternative pipelines</li>
+</ul>
+<p><strong>Monitoring</strong>:</p>
+<ul>
+<li>Prometheus + Grafana — Metrics and dashboards</li>
+<li>Model drift detection — Evidently, Great Expectations</li>
+</ul>
+<hr>
+<h2 id="code-quality-principles" class="relative group">Code Quality Principles <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#code-quality-principles" aria-label="Anchor">#</a></span></h2><h3 id="1-clarity-over-cleverness" class="relative group">1. Clarity Over Cleverness <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-clarity-over-cleverness" aria-label="Anchor">#</a></span></h3><p><strong>Bad</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">f</span>(x):<span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">sum</span>([i<span style="color:#ff79c6">**</span><span style="color:#bd93f9">2</span> <span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> x <span style="color:#ff79c6">if</span> i<span style="color:#ff79c6">%</span><span style="color:#bd93f9">2</span>])
+</span></span></code></pre></div><p><strong>Good</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">sum_odd_squares</span>(numbers: <span style="color:#8be9fd;font-style:italic">list</span>[<span style="color:#8be9fd;font-style:italic">int</span>]) <span style="color:#ff79c6">-&gt;</span> <span style="color:#8be9fd;font-style:italic">int</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;&#34;&#34;Return sum of squares of odd numbers.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">sum</span>(n<span style="color:#ff79c6">**</span><span style="color:#bd93f9">2</span> <span style="color:#ff79c6">for</span> n <span style="color:#ff79c6">in</span> numbers <span style="color:#ff79c6">if</span> n <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span>)
+</span></span></code></pre></div><h3 id="2-ship-then-iterate" class="relative group">2. Ship, Then Iterate <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-ship-then-iterate" aria-label="Anchor">#</a></span></h3><p><strong>Perfect is the enemy of done</strong>.</p>
+<ul>
+<li>Don&rsquo;t wait for 99% accuracy</li>
+<li>Ship MVP, gather feedback, improve</li>
+<li>Iterate based on real usage, not assumptions</li>
+</ul>
+<h3 id="3-document-everything" class="relative group">3. Document Everything <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-document-everything" aria-label="Anchor">#</a></span></h3><p><strong>Future me (and collaborators) will thank present me</strong>.</p>
+<p>✅ <strong>docstrings</strong> for all functions<br>
+✅ <strong>README.md</strong> with setup, usage, architecture<br>
+✅ <strong>Architecture diagrams</strong> (draw.io, mermaid)<br>
+✅ <strong>Decision logs</strong> — Why you chose X over Y<br>
+✅ <strong>Inline comments</strong> for non-obvious logic</p>
+<h3 id="4-test-locally-deploy-confidently" class="relative group">4. Test Locally, Deploy Confidently <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-test-locally-deploy-confidently" aria-label="Anchor">#</a></span></h3><p><strong>Never deploy untested code</strong>.</p>
+<ul>
+<li>Unit tests (pytest)</li>
+<li>Integration tests (API endpoints)</li>
+<li>Load tests (locust, JMeter)</li>
+<li>Smoke tests in production</li>
+</ul>
+<hr>
+<h2 id="github-best-practices" class="relative group">GitHub Best Practices <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#github-best-practices" aria-label="Anchor">#</a></span></h2><p>Based on real-world experience:</p>
+<p>✅ <strong>Pinned Repositories</strong> — Show best work first<br>
+✅ <strong>Professional READMEs</strong> — Setup, usage, demo links<br>
+✅ <strong>Clear Commit History</strong> — Descriptive messages, logical progression<br>
+✅ <strong>Active Maintenance</strong> — Regular updates, issue responses<br>
+✅ <strong>No Abandoned Projects</strong> — Archive done projects, maintain active ones<br>
+✅ <strong>Licenses</strong> — Add MIT/Apache for open-source<br>
+✅ <strong>CI/CD Badges</strong> — Show build status, coverage</p>
+<h3 id="commit-message-format" class="relative group">Commit Message Format <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#commit-message-format" aria-label="Anchor">#</a></span></h3><pre tabindex="0"><code>feat: add real-time inference API
+fix: resolve memory leak in data loader
+docs: update README with deployment steps
+test: add unit tests for preprocessing
+refactor: simplify feature engineering pipeline
+</code></pre><hr>
+<h2 id="technical-communication" class="relative group">Technical Communication <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#technical-communication" aria-label="Anchor">#</a></span></h2><h3 id="write-blogs-explaining-architectural-decisions" class="relative group">Write Blogs Explaining Architectural Decisions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#write-blogs-explaining-architectural-decisions" aria-label="Anchor">#</a></span></h3><p><strong>Topics to Write About</strong>:</p>
+<ul>
+<li>Why I chose BERT over GPT for this task</li>
+<li>Chunking strategies for RAG systems</li>
+<li>Optimizing YOLO for Raspberry Pi</li>
+<li>LoRA vs full fine-tuning tradeoffs</li>
+<li>Building a real-time recommendation system</li>
+</ul>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Demonstrate deep understanding</li>
+<li>Help others learn</li>
+<li>Portfolio differentiation</li>
+<li>SEO for personal brand</li>
+</ul>
+<p><strong>Platforms</strong>:</p>
+<ul>
+<li>Medium</li>
+<li>Dev.to</li>
+<li>Personal blog (Hugo, Jekyll)</li>
+<li>LinkedIn articles</li>
+</ul>
+<hr>
+<h2 id="2026-tech-stack-goals" class="relative group">2026 Tech Stack Goals <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2026-tech-stack-goals" aria-label="Anchor">#</a></span></h2><p>Building toward modern ML engineering standards:</p>
+<h3 id="mlops" class="relative group">MLOps <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mlops" aria-label="Anchor">#</a></span></h3><ul>
+<li><strong>CI/CD</strong>: GitHub Actions for every project</li>
+<li><strong>Monitoring</strong>: Prometheus + Grafana dashboards</li>
+<li><strong>Versioning</strong>: DVC for data, git for code</li>
+<li><strong>Deployment</strong>: K8s for scalable inference</li>
+</ul>
+<h3 id="llm-systems" class="relative group">LLM Systems <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#llm-systems" aria-label="Anchor">#</a></span></h3><ul>
+<li><strong>Advanced RAG</strong>: Multi-modal (text + images)</li>
+<li><strong>Agent Orchestration</strong>: LangGraph for complex workflows</li>
+<li><strong>Fine-Tuning</strong>: RLHF (Reinforcement Learning from Human Feedback)</li>
+<li><strong>Evaluation</strong>: Comprehensive test suites for LLMs</li>
+</ul>
+<h3 id="edge-ai" class="relative group">Edge AI <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#edge-ai" aria-label="Anchor">#</a></span></h3><ul>
+<li><strong>Optimization</strong>: Quantization, pruning, distillation</li>
+<li><strong>Hardware</strong>: Raspberry Pi, Coral TPU, mobile devices</li>
+<li><strong>Real-Time</strong>: &lt;100ms inference on edge</li>
+</ul>
+<h3 id="frontend" class="relative group">Frontend <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#frontend" aria-label="Anchor">#</a></span></h3><ul>
+<li><strong>Design</strong>: Minimalist, glassmorphism, dark mode</li>
+<li><strong>Performance</strong>: &lt;1s load times, optimized assets</li>
+<li><strong>Accessibility</strong>: WCAG 2.1 compliant</li>
+<li><strong>Mobile-First</strong>: Responsive design</li>
+</ul>
+<h3 id="performance" class="relative group">Performance <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#performance" aria-label="Anchor">#</a></span></h3><ul>
+<li><strong>API Latency</strong>: &lt;100ms P95</li>
+<li><strong>Model Inference</strong>: &lt;500ms for LLMs</li>
+<li><strong>Data Pipelines</strong>: Real-time streaming (Kafka)</li>
+</ul>
+<hr>
+<h2 id="personal-values" class="relative group">Personal Values <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#personal-values" aria-label="Anchor">#</a></span></h2><p><strong>Authenticity</strong>:</p>
+<ul>
+<li>Real code, real tradeoffs, honest documentation</li>
+<li>No AI-generated fluff or exaggerated claims</li>
+</ul>
+<p><strong>Continuous Learning</strong>:</p>
+<ul>
+<li>Stay current with latest ML/AI research</li>
+<li>Implement new techniques in projects</li>
+<li>Learn by building, not just tutorials</li>
+</ul>
+<p><strong>Community</strong>:</p>
+<ul>
+<li>Share knowledge through blogs and open-source</li>
+<li>Help others on StackOverflow, GitHub Discussions</li>
+<li>Contribute to open-source ML projects</li>
+</ul>
+<p><strong>Impact</strong>:</p>
+<ul>
+<li>Build tools that solve real problems</li>
+<li>Focus on business value, not just cool tech</li>
+<li>Measure success by user adoption and feedback</li>
+</ul>
+<hr>
+<h2 id="closing-thoughts" class="relative group">Closing Thoughts <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#closing-thoughts" aria-label="Anchor">#</a></span></h2><blockquote>
+<p>&ldquo;I Build Production ML Systems and I Ship&rdquo;</p>
+</blockquote>
+<p>This isn&rsquo;t about having the most complex models or latest frameworks. It&rsquo;s about:</p>
+<ol>
+<li><strong>Solving real problems</strong> with measurable impact</li>
+<li><strong>Shipping production-ready code</strong> that others can use</li>
+<li><strong>Documenting the journey</strong> so others can learn</li>
+<li><strong>Iterating based on feedback</strong> to continuously improve</li>
+</ol>
+<p><strong>Quality over quantity. Impact over hype. Shipping over perfecting.</strong></p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          0xMuler
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">ML Engineer building production AI systems. Specializing in MLOps, LLM engineering, and end-to-end ML pipelines.</div>
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/about/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >About</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 1</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            0xMuler
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

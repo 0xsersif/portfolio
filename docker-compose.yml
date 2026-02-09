@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: oxmuler-portfolio
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    volumes:
+      # Persist Caddy data (certificates, logs)
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - portfolio-net
+    labels:
+      - "com.portfolio.description=0xMuler Portfolio Site"
+      - "com.portfolio.version=1.0"
+
+networks:
+  portfolio-net:
+    driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:

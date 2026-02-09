@@ -1,0 +1,657 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en-gb"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Go Todo CLI/Web Tool &middot; 0xMuler // ML Engineer & AI Builder</title>
+    <meta name="title" content="Go Todo CLI/Web Tool &middot; 0xMuler // ML Engineer & AI Builder" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.b03e5259dac2760f0e3006bed7d970a363f24345198646bec6dbd9d2fb966a12.css"
+    integrity="sha256-sD5SWdrCdg8OMAa&#43;19lwo2PyQ0UZhka&#43;xtvZ0vuWahI="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.167efd96c29259046e711c52c0db66536f497aad73a774cd6f28fc408f2d2688.js"
+      integrity="sha256-Fn79lsKSWQRucRxSwNtmU29Jeq1zp3TNbyj8QI8tJog="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      Minimal todo application built with Go standard library, featuring dark mode and glassmorphic UI
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/projects/go-todo-app/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/projects/go-todo-app/">
+  <meta property="og:site_name" content="0xMuler // ML Engineer & AI Builder">
+  <meta property="og:title" content="Go Todo CLI/Web Tool">
+  <meta property="og:description" content="Minimal todo application built with Go standard library, featuring dark mode and glassmorphic UI">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-09-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-10T00:00:00+00:00">
+    <meta property="article:tag" content="Go">
+    <meta property="article:tag" content="Full-Stack">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="CLI">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Go Todo CLI/Web Tool">
+  <meta name="twitter:description" content="Minimal todo application built with Go standard library, featuring dark mode and glassmorphic UI">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Projects",
+    "name": "Go Todo CLI\/Web Tool",
+    "headline": "Go Todo CLI\/Web Tool",
+    "description": "Minimal todo application built with Go standard library, featuring dark mode and glassmorphic UI",
+    "abstract": "\u003ch1 id=\u0022go-todo-app\u0022 class=\u0022relative group\u0022\u003eGo Todo App \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#go-todo-app\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h1\u003e\u003ch2 id=\u0022minimal-cliweb-tool-with-modern-ui\u0022 class=\u0022relative group\u0022\u003eMinimal CLI\/Web Tool with Modern UI \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#minimal-cliweb-tool-with-modern-ui\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cp\u003eA streamlined todo application built entirely with \u003cstrong\u003eGo\u0026rsquo;s standard library\u003c\/strong\u003e—no external dependencies. Demonstrates Go proficiency with a beautiful, minimal interface.\u003c\/p\u003e\n\u003ch2 id=\u0022philosophy\u0022 class=\u0022relative group\u0022\u003ePhilosophy \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#philosophy\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cp\u003eChose standard library over frameworks to:\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003eMaintain authenticity and learning\u003c\/li\u003e\n\u003cli\u003eZero dependencies (easy deployment)\u003c\/li\u003e\n\u003cli\u003eUnderstand HTTP servers from first principles\u003c\/li\u003e\n\u003cli\u003eKeep codebase minimal and fast\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022features\u0022 class=\u0022relative group\u0022\u003eFeatures \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#features\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cp\u003e✅ \u003cstrong\u003eDark Mode\u003c\/strong\u003e — Default beautiful dark theme\u003cbr\u003e\n✅ \u003cstrong\u003eGlassmorphic UI\u003c\/strong\u003e — Modern frosted glass effects\u003cbr\u003e\n✅ \u003cstrong\u003eInline Editing\u003c\/strong\u003e — Click to edit tasks directly\u003cbr\u003e\n✅ \u003cstrong\u003ePriority Management\u003c\/strong\u003e — High\/Medium\/Low priorities\u003cbr\u003e\n✅ \u003cstrong\u003eLocal Storage\u003c\/strong\u003e — Persist tasks in JSON file\u003cbr\u003e\n✅ \u003cstrong\u003eCLI Mode\u003c\/strong\u003e — Use from terminal or web browser\u003c\/p\u003e",
+    "inLanguage": "en-gb",
+    "url" : "http:\/\/localhost:1313\/projects\/go-todo-app\/",
+    "author" : {
+      "@type": "Person",
+      "name": "0xMuler"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-09-10T00:00:00\u002b00:00",
+    "datePublished": "2025-09-10T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-09-10T00:00:00\u002b00:00",
+    
+    "keywords": ["Go","Full-Stack","Web","CLI"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "417"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "0x Muler Ml Engineer \u0026 Ai Builder",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/projects/",
+       "name": "Projects",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/categories/full-stack/",
+       "name": "Full-Stack",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Go Todo CLI Web Tool",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="0xMuler" />
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >0xMuler // ML Engineer &amp; AI Builder</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/projects/"
+                  title="Projects"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Projects</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/philosophy/"
+                  title="Development Philosophy &amp; MLOps Practices"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Philosophy</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Go Todo CLI/Web Tool
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-09-10 00:00:00 &#43;0000 UTC">September 10, 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h1 id="go-todo-app" class="relative group">Go Todo App <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#go-todo-app" aria-label="Anchor">#</a></span></h1><h2 id="minimal-cliweb-tool-with-modern-ui" class="relative group">Minimal CLI/Web Tool with Modern UI <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#minimal-cliweb-tool-with-modern-ui" aria-label="Anchor">#</a></span></h2><p>A streamlined todo application built entirely with <strong>Go&rsquo;s standard library</strong>—no external dependencies. Demonstrates Go proficiency with a beautiful, minimal interface.</p>
+<h2 id="philosophy" class="relative group">Philosophy <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#philosophy" aria-label="Anchor">#</a></span></h2><p>Chose standard library over frameworks to:</p>
+<ul>
+<li>Maintain authenticity and learning</li>
+<li>Zero dependencies (easy deployment)</li>
+<li>Understand HTTP servers from first principles</li>
+<li>Keep codebase minimal and fast</li>
+</ul>
+<h2 id="features" class="relative group">Features <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#features" aria-label="Anchor">#</a></span></h2><p>✅ <strong>Dark Mode</strong> — Default beautiful dark theme<br>
+✅ <strong>Glassmorphic UI</strong> — Modern frosted glass effects<br>
+✅ <strong>Inline Editing</strong> — Click to edit tasks directly<br>
+✅ <strong>Priority Management</strong> — High/Medium/Low priorities<br>
+✅ <strong>Local Storage</strong> — Persist tasks in JSON file<br>
+✅ <strong>CLI Mode</strong> — Use from terminal or web browser</p>
+<h2 id="tech-stack" class="relative group">Tech Stack <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tech-stack" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Go (stdlib only)</strong> — <code>net/http</code>, <code>encoding/json</code>, <code>html/template</code></li>
+<li><strong>Modern CSS</strong> — Custom glassmorphism, dark mode</li>
+<li><strong>Vanilla JavaScript</strong> — No jQuery, no React, pure JS</li>
+<li><strong>No Database</strong> — Simple JSON file storage</li>
+</ul>
+<h2 id="code-highlights" class="relative group">Code Highlights <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#code-highlights" aria-label="Anchor">#</a></span></h2><h3 id="http-server-stdlib-only" class="relative group">HTTP Server (stdlib only) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#http-server-stdlib-only" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff79c6">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;encoding/json&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;html/template&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;os&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">type</span> Todo <span style="color:#8be9fd;font-style:italic">struct</span> {
+</span></span><span style="display:flex;"><span>    ID       <span style="color:#8be9fd">int</span>    <span style="color:#f1fa8c">`json:&#34;id&#34;`</span>
+</span></span><span style="display:flex;"><span>    Title    <span style="color:#8be9fd">string</span> <span style="color:#f1fa8c">`json:&#34;title&#34;`</span>
+</span></span><span style="display:flex;"><span>    Done     <span style="color:#8be9fd">bool</span>   <span style="color:#f1fa8c">`json:&#34;done&#34;`</span>
+</span></span><span style="display:flex;"><span>    Priority <span style="color:#8be9fd">string</span> <span style="color:#f1fa8c">`json:&#34;priority&#34;`</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>    http.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/&#34;</span>, homeHandler)
+</span></span><span style="display:flex;"><span>    http.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/api/todos&#34;</span>, todosHandler)
+</span></span><span style="display:flex;"><span>    http.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/static/&#34;</span>, staticHandler)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    log.<span style="color:#50fa7b">Println</span>(<span style="color:#f1fa8c">&#34;Server starting on :8080&#34;</span>)
+</span></span><span style="display:flex;"><span>    http.<span style="color:#50fa7b">ListenAndServe</span>(<span style="color:#f1fa8c">&#34;:8080&#34;</span>, <span style="color:#ff79c6">nil</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="glassmorphic-css" class="relative group">Glassmorphic CSS <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#glassmorphic-css" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#50fa7b">todo-card</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">0.1</span>);
+</span></span><span style="display:flex;"><span>    backdrop-filter: <span style="color:#8be9fd;font-style:italic">blur</span>(<span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">0.2</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">16</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">8</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">32</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="ui-design" class="relative group">UI Design <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ui-design" aria-label="Anchor">#</a></span></h2><p><strong>Color Scheme</strong>:</p>
+<ul>
+<li>Background: <code>#0a0e27</code> (deep blue-black)</li>
+<li>Accent: <code>#667eea</code> → <code>#764ba2</code> (purple gradient)</li>
+<li>Glass: <code>rgba(255, 255, 255, 0.1)</code> with blur</li>
+</ul>
+<p><strong>Typography</strong>:</p>
+<ul>
+<li>Headers: <code>Inter</code> (Google Fonts)</li>
+<li>Mono: <code>JetBrains Mono</code> for code</li>
+</ul>
+<p><strong>Animations</strong>:</p>
+<ul>
+<li>Smooth hover transitions (200ms)</li>
+<li>Task completion fade effect</li>
+<li>Priority badge color shifts</li>
+</ul>
+<h2 id="live-demo" class="relative group">Live Demo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#live-demo" aria-label="Anchor">#</a></span></h2><p>🚀 <strong><a href="https://go-todo-demo.0xmuler.dev" target="_blank" rel="noreferrer">Try it Live →</a></strong></p>
+<h2 id="github-repository" class="relative group">GitHub Repository <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#github-repository" aria-label="Anchor">#</a></span></h2><p>📂 <strong><a href="https://github.com/0xmuler/go-todo-app" target="_blank" rel="noreferrer">View Source Code →</a></strong></p>
+<p>Features:</p>
+<ul>
+<li>Clean, documented Go code</li>
+<li>No external dependencies</li>
+<li>Docker support</li>
+<li>Professional README</li>
+</ul>
+<h2 id="why-go-standard-library" class="relative group">Why Go Standard Library? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#why-go-standard-library" aria-label="Anchor">#</a></span></h2><p><strong>Learning Value</strong>:</p>
+<ul>
+<li>Understand HTTP servers deeply</li>
+<li>Master Go interfaces and concurrency</li>
+<li>No framework magic, full control</li>
+</ul>
+<p><strong>Production Benefits</strong>:</p>
+<ul>
+<li>Fast compilation (&lt;1s)</li>
+<li>Tiny binary (5MB)</li>
+<li>No dependency hell</li>
+<li>Easy deployment</li>
+</ul>
+<h2 id="deployment" class="relative group">Deployment <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#deployment" aria-label="Anchor">#</a></span></h2><h3 id="binary-no-dependencies" class="relative group">Binary (no dependencies) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#binary-no-dependencies" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go build -o todo
+</span></span><span style="display:flex;"><span>./todo
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Server runs on localhost:8080</span>
+</span></span></code></pre></div><h3 id="docker" class="relative group">Docker <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#docker" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> <span style="color:#f1fa8c">golang:1.21-alpine</span> <span style="color:#ff79c6">AS</span> <span style="color:#f1fa8c">builder</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">WORKDIR</span> <span style="color:#f1fa8c">/app</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">COPY</span> . .
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">RUN</span> go build -o todo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> <span style="color:#f1fa8c">alpine:latest</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">COPY</span> --from<span style="color:#ff79c6">=</span>builder /app/todo /todo
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">CMD</span> [<span style="color:#f1fa8c">&#34;/todo&#34;</span>]
+</span></span></code></pre></div><h2 id="lessons-learned" class="relative group">Lessons Learned <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lessons-learned" aria-label="Anchor">#</a></span></h2><ol>
+<li><strong>Standard library is powerful</strong> — Don&rsquo;t need frameworks for simple apps</li>
+<li><strong>CSS can be beautiful</strong> — No need for component libraries</li>
+<li><strong>Vanilla JS is fast</strong> — React would be overkill here</li>
+<li><strong>Simplicity scales</strong> — Fewer dependencies = less maintenance</li>
+</ol>
+<h2 id="future-enhancements" class="relative group">Future Enhancements <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#future-enhancements" aria-label="Anchor">#</a></span></h2><ul>
+<li>User authentication (SQLite + JWT)</li>
+<li>Due dates and reminders</li>
+<li>Tags and categories</li>
+<li>Sync across devices (WebSocket)</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          0xMuler
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">ML Engineer building production AI systems. Specializing in MLOps, LLM engineering, and end-to-end ML pipelines.</div>
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/projects/python-collection/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >CS50P Python Projects Collection</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-08-05 00:00:00 &#43;0000 UTC">August 5, 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/projects/time-series-forecasting/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Business Time-Series Forecasting</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-10-15 00:00:00 &#43;0000 UTC">October 15, 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            0xMuler
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

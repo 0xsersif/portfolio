@@ -1,0 +1,41 @@
+# Caddyfile - Simple HTTP server configuration
+# For HTTPS, replace :80 with your domain name
+
+:80 {
+    # Serve files from /srv directory
+    root * /srv
+    
+    # Enable file server
+    file_server
+    
+    # Enable gzip compression
+    encode gzip
+    
+    # SPA-style routing (optional, if needed)
+    try_files {path} {path}/ /index.html
+    
+    # Security headers
+    header {
+        # XSS Protection
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        X-XSS-Protection "1; mode=block"
+        
+        # Enable HSTS (if using HTTPS)
+        # Strict-Transport-Security "max-age=31536000;"
+    }
+    
+    # Logging
+    log {
+        output file /var/log/caddy/access.log
+        format json
+    }
+}
+
+# For automatic HTTPS with domain:
+# yourdomain.com {
+#     root * /srv
+#     file_server
+#     encode gzip
+# }
+# Caddy automatically obtains and renews SSL certificates!

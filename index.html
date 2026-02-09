@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Othman Sersif | Engineering & Technology Portfolio</title>
+    <meta name="description" content="Portfolio of Othman Sersif - Mechanical Engineering & IT Enthusiast specializing in CAD, Programming, and Networking.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #14b8a6; /* Teal-500 */
+            --accent-hover: #0d9488; /* Teal-600 */
+            --border-color: #333333;
+            --font-main: 'Inter', sans-serif;
+            --max-width: 1200px;
+            --header-height: 80px;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            color: var(--text-primary);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        p { color: var(--text-secondary); margin-bottom: 1rem; }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            height: var(--header-height);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: var(--header-height);
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 4rem;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            color: var(--text-secondary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .hero-image-container {
+            flex: 0 0 400px;
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            background-color: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 5rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* About Section */
+        .about-grid {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-text p {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .skill-category h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background-color: rgba(20, 184, 166, 0.08);
+            color: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(20, 184, 166, 0.1);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+            border-color: rgba(20, 184, 166, 0.4);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 4rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.35rem;
+        }
+
+        .project-content p {
+            font-size: 1rem;
+            flex: 1;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 3rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.65rem;
+            top: 0.4rem;
+            width: 1.1rem;
+            height: 1.1rem;
+            background-color: var(--bg-color);
+            border: 3px solid var(--accent-color);
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            transform: scale(1.3);
+            background-color: var(--accent-color);
+        }
+
+        .timeline-date {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-role {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .timeline-company {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-text {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            padding: 1.2rem 2.5rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1rem; /* Space between icon and text */
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .contact-link:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            background-color: rgba(20, 184, 166, 0.05);
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            h1 { font-size: 3rem; }
+            .hero-title { font-size: 3rem; }
+            .container { padding: 0 1.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero-title { font-size: 2.5rem; }
+            .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; justify-content: center; }
+            .hero-content { padding-right: 0; }
+            .hero-image-container { flex: 0 0 200px; margin-bottom: 2rem; width: 200px; }
+            .hero-image { height: 200px; width: 200px; border-radius: 50%; }
+            .btn { width: 100%; margin: 0.5rem 0; display: block; }
+            .btn-outline { margin-left: 0; }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-color);
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                padding: 2rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .experience-timeline { padding-left: 2rem; }
+            .timeline-item::before { left: -2.6rem; width: 1rem; height: 1rem; border-width: 2px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Othman Sersif</div>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <h1 class="hero-title">Othman Sersif</h1>
+            <h2 class="hero-subtitle">Mechanical Engineering & IT Enthusiast | CAD, Programming, Networking</h2>
+            <p class="hero-description">
+                Bridging mechanical design and digital efficiency. A detail-oriented problem solver currently specializing in Mechanical Engineering, with a strong foundation in networking and software development.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <!-- Ideally replace src with your actual photo path -->
+            <img src="https://ui-avatars.com/api/?name=Othman+Sersif&background=1e1e1e&color=14b8a6&size=400&font-size=0.33&rounded=true&bold=true" alt="Othman Sersif Profile" class="hero-image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section container">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    My technical journey began with a rigorous focus on <span class="highlight">Mathematics and Engineering Sciences</span> during my technical high school years in Salé. This formative period instilled in me a disciplined, analytical mindset and a deep curiosity about how complex systems function.
+                </p>
+                <p>
+                    I initially pursued <span class="highlight">Networks and Telecommunications</span> at university, where I built a solid literacy in digital infrastructure and protocols. Although I chose a different path before completing the degree, that exposure to the digital backbone of modern technology remains a core part of my skillset. To further broaden my perspective, I dedicated a year to mastering the German language, achieving <span class="highlight">B1 certification</span>—a testament to my adaptability and persistence.
+                </p>
+                <p>
+                    Today, I am synthesizing my diverse interests through vocational training in <span class="highlight">Mechanical Engineering (Maschinenbau)</span>. I thrive at the intersection of hardware and software—whether I'm designing assemblies in Catia V5, writing logic in C++, or configuring networks in Packet Tracer. I am driven by the challenge of building real, functional solutions and am eager to bring this unique blend of mechanical insight and IT proficiency to a professional team.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section container">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>CAD & Design</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Catia V5</span>
+                    <span class="skill-tag">AutoCAD</span>
+                    <span class="skill-tag">3D Modeling</span>
+                    <span class="skill-tag">Technical Drawing</span>
+                    <span class="skill-tag">Prototyping</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Algorithm Design</span>
+                    <span class="skill-tag">Data Structures</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Networking</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Cisco Packet Tracer</span>
+                    <span class="skill-tag">Routing (RIP, OSPF)</span>
+                    <span class="skill-tag">VLAN Configuration</span>
+                    <span class="skill-tag">Network Security</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Tools & Software</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">VMware</span>
+                    <span class="skill-tag">MS Office (Excel, Word)</span>
+                    <span class="skill-tag">Linux Basics</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Arabic (Native)</span>
+                    <span class="skill-tag">English (Fluent)</span>
+                    <span class="skill-tag">French (Intermediate)</span>
+                    <span class="skill-tag">German (B1 Certified)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section container">
+        <h2>Selected Projects</h2>
+        <div class="projects-grid">
+            
+            <!-- Project 1 -->
+            <article class="project-card">
+                <div class="project-image">⚙️</div>
+                <div class="project-content">
+                    <div class="project-tech">Catia V5 • AutoCAD • Mechanical Design</div>
+                    <h3>Automated Robotic Arm Assembly</h3>
+                    <p>Designed and modeled a 6-axis robotic arm assembly focusing on kinematic constraints and structural integrity. Produced detailed 2D manufacturing drawings and ran assembly simulations to verify full range of motion without collision.</p>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card">
+                <div class="project-image">🌐</div>
+                <div class="project-content">
+                    <div class="project-tech">Cisco Packet Tracer • Networking • Security</div>
+                    <h3>Secure Enterprise Network Simulation</h3>
+                    <p>Designed a redundant network infrastructure for a simulated multi-building campus. Configured VLANs for departmental segmentation, implemented OSPF for dynamic routing, and applied ACLs to secure sensitive server zones.</p>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card">
+                <div class="project-image">💻</div>
+                <div class="project-content">
+                    <div class="project-tech">C++ • SQL • Database Design</div>
+                    <h3>Technical Inventory Management System</h3>
+                    <p>Developed a console-based C++ application to track workshop inventory. Implemented a relational SQL database backend to manage parts, suppliers, and stock levels efficiently, replacing a theoretical manual process.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Experience / Education Section -->
+    <section id="experience" class="section container">
+        <h2>Experience & Education</h2>
+        <div class="experience-timeline">
+            
+            <div class="timeline-item">
+                <span class="timeline-date">Sep 2022 – Present</span>
+                <h3 class="timeline-role">Vocational Training – Automotive Professions</h3>
+                <p class="timeline-company">Fachhochschule für Automobilberufe Chemaou – Salé OFPPT</p>
+                <p>Specializing in Mechanical Engineering (Maschinenbau). Developing practical expertise in automotive systems, mechanical design principles, and industrial maintenance standards.</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">Oct 2022 – Jun 2023</span>
+                <h3 class="timeline-role">German Language Course – B1 Level</h3>
+                <p class="timeline-company">GLS Sprachenzentrum (Private Language Center)</p>
+                <p>Achieved telc Deutsch B1 certificate (Satisfactory). Intense language acquisition program focusing on integration and professional communication skills.</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">Sep 2020 – May 2022</span>
+                <h3 class="timeline-role">Network and Telecommunications Studies</h3>
+                <p class="timeline-company">Sidi Mohamed Ben Abdellah University – Fes</p>
+                <p>Completed foundational coursework in computer science, network architecture, signal processing, and telecommunications theory.</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">Sep 2019 – Jul 2020</span>
+                <h3 class="timeline-role">Technical Baccalaureate (BAC)</h3>
+                <p class="timeline-company">Technical High School El Farabi – Salé</p>
+                <p>Major in Mathematics and Engineering Sciences (Option B – Mathematical Sciences). Graduated with a focus on logic, calculus, and physics.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section container">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <p class="contact-text">
+                I am currently seeking entry-level opportunities in IT, software development, networking, or mechanical design. I am eager to apply my skills and continue learning.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:Othm2002ser@gmail.com" class="contact-link">
+                    <span>📧</span> Othm2002ser@gmail.com
+                </a>
+                <a href="tel:+212707615313" class="contact-link">
+                    <span>📱</span> +212 707 615 313
+                </a>
+            </div>
+            <!-- Add LinkedIn/GitHub here if available, e.g.:
+            <div style="margin-top: 2rem;">
+                <a href="#" style="margin: 0 10px; font-size: 1.5rem; color: var(--text-secondary);">LinkedIn</a>
+                <a href="#" style="margin: 0 10px; font-size: 1.5rem; color: var(--text-secondary);">GitHub</a>
+            </div>
+            -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Othman Sersif. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Change icon based on state if desired, or keep simple
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Reveal on Scroll Animation
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, revealOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    revealOnScroll.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            revealOnScroll.observe(section);
+        });
+    </script>
+</body>
+</html>

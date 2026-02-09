@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 0xMuler // ML Engineer &amp; AI Builder</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on 0xMuler // ML Engineer &amp; AI Builder</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Evaluation</title>
+      <link>http://localhost:1313/tags/evaluation/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/evaluation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>http://localhost:1313/tags/llm/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MLflow</title>
+      <link>http://localhost:1313/tags/mlflow/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mlflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MLOps</title>
+      <link>http://localhost:1313/tags/mlops/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mlops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Streamlit</title>
+      <link>http://localhost:1313/tags/streamlit/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/streamlit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>http://localhost:1313/tags/automation/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LangChain</title>
+      <link>http://localhost:1313/tags/langchain/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/langchain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LangGraph</title>
+      <link>http://localhost:1313/tags/langgraph/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/langgraph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi-Agent</title>
+      <link>http://localhost:1313/tags/multi-agent/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/multi-agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fine-Tuning</title>
+      <link>http://localhost:1313/tags/fine-tuning/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/fine-tuning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugging Face</title>
+      <link>http://localhost:1313/tags/hugging-face/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/hugging-face/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LoRA</title>
+      <link>http://localhost:1313/tags/lora/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lora/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PyTorch</title>
+      <link>http://localhost:1313/tags/pytorch/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FastAPI</title>
+      <link>http://localhost:1313/tags/fastapi/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/fastapi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>http://localhost:1313/tags/rag/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vector DB</title>
+      <link>http://localhost:1313/tags/vector-db/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/vector-db/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kafka</title>
+      <link>http://localhost:1313/tags/kafka/</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/kafka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ML Engineering</title>
+      <link>http://localhost:1313/tags/ml-engineering/</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ml-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Real-Time</title>
+      <link>http://localhost:1313/tags/real-time/</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/real-time/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recommender</title>
+      <link>http://localhost:1313/tags/recommender/</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/recommender/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spark</title>
+      <link>http://localhost:1313/tags/spark/</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/spark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Computer Vision</title>
+      <link>http://localhost:1313/tags/computer-vision/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Edge AI</title>
+      <link>http://localhost:1313/tags/edge-ai/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/edge-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ONNX</title>
+      <link>http://localhost:1313/tags/onnx/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/onnx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>YOLO</title>
+      <link>http://localhost:1313/tags/yolo/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/yolo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Forecasting</title>
+      <link>http://localhost:1313/tags/forecasting/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/forecasting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GRU</title>
+      <link>http://localhost:1313/tags/gru/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/gru/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Time Series</title>
+      <link>http://localhost:1313/tags/time-series/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/time-series/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XGBoost</title>
+      <link>http://localhost:1313/tags/xgboost/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/xgboost/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CLI</title>
+      <link>http://localhost:1313/tags/cli/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Full-Stack</title>
+      <link>http://localhost:1313/tags/full-stack/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/full-stack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1313/tags/go/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/tags/web/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CS50</title>
+      <link>http://localhost:1313/tags/cs50/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cs50/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Education</title>
+      <link>http://localhost:1313/tags/education/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CPanel</title>
+      <link>http://localhost:1313/tags/cpanel/</link>
+      <pubDate>Sun, 20 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cpanel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flask</title>
+      <link>http://localhost:1313/tags/flask/</link>
+      <pubDate>Sun, 20 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/flask/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

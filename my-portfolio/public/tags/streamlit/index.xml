@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Streamlit on 0xMuler // ML Engineer &amp; AI Builder</title>
+    <link>http://localhost:1313/tags/streamlit/</link>
+    <description>Recent content in Streamlit on 0xMuler // ML Engineer &amp; AI Builder</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/streamlit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LLM Evaluation Dashboard</title>
+      <link>http://localhost:1313/projects/llm-evaluation/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/llm-evaluation/</guid>
+      <description>&lt;h1 id=&#34;llm-evaluation-dashboard&#34; class=&#34;relative group&#34;&gt;LLM Evaluation Dashboard &lt;span class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100&#34;&gt;&lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34; style=&#34;text-decoration-line: none !important;&#34; href=&#34;#llm-evaluation-dashboard&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h1&gt;&lt;h2 id=&#34;problem-statement&#34; class=&#34;relative group&#34;&gt;Problem Statement &lt;span class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100&#34;&gt;&lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34; style=&#34;text-decoration-line: none !important;&#34; href=&#34;#problem-statement&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;RAG systems are hard to evaluate. How do you:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Compare different chunking strategies (semantic vs fixed-size)?&lt;/li&gt;&#xA;&lt;li&gt;Measure hallucination rates across prompt variations?&lt;/li&gt;&#xA;&lt;li&gt;A/B test retrieval methods (dense vs hybrid)?&lt;/li&gt;&#xA;&lt;li&gt;Track performance over time?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This project builds a &lt;strong&gt;comprehensive evaluation framework&lt;/strong&gt; with visual dashboards to systematically improve RAG system quality.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

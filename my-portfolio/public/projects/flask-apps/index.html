@@ -1,0 +1,687 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en-gb"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Production Flask Web Applications &middot; 0xMuler // ML Engineer & AI Builder</title>
+    <meta name="title" content="Production Flask Web Applications &middot; 0xMuler // ML Engineer & AI Builder" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.b03e5259dac2760f0e3006bed7d970a363f24345198646bec6dbd9d2fb966a12.css"
+    integrity="sha256-sD5SWdrCdg8OMAa&#43;19lwo2PyQ0UZhka&#43;xtvZ0vuWahI="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.167efd96c29259046e711c52c0db66536f497aad73a774cd6f28fc408f2d2688.js"
+      integrity="sha256-Fn79lsKSWQRucRxSwNtmU29Jeq1zp3TNbyj8QI8tJog="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      Full-stack Flask apps deployed on cPanel with authentication, database, and real users
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/projects/flask-apps/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/projects/flask-apps/">
+  <meta property="og:site_name" content="0xMuler // ML Engineer & AI Builder">
+  <meta property="og:title" content="Production Flask Web Applications">
+  <meta property="og:description" content="Full-stack Flask apps deployed on cPanel with authentication, database, and real users">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-07-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-20T00:00:00+00:00">
+    <meta property="article:tag" content="Flask">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Full-Stack">
+    <meta property="article:tag" content="CPanel">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Production Flask Web Applications">
+  <meta name="twitter:description" content="Full-stack Flask apps deployed on cPanel with authentication, database, and real users">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Projects",
+    "name": "Production Flask Web Applications",
+    "headline": "Production Flask Web Applications",
+    "description": "Full-stack Flask apps deployed on cPanel with authentication, database, and real users",
+    "abstract": "\u003ch1 id=\u0022production-flask-web-applications\u0022 class=\u0022relative group\u0022\u003eProduction Flask Web Applications \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#production-flask-web-applications\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h1\u003e\u003ch2 id=\u0022full-stack-apps-with-real-users\u0022 class=\u0022relative group\u0022\u003eFull-Stack Apps with Real Users \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#full-stack-apps-with-real-users\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cp\u003eBuilt and deployed \u003cstrong\u003eproduction Flask applications\u003c\/strong\u003e on cPanel hosting, handling real users with authentication, database integration, and responsive design.\u003c\/p\u003e\n\u003ch2 id=\u0022featured-application-run1events\u0022 class=\u0022relative group\u0022\u003eFeatured Application: Run1Events \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#featured-application-run1events\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cp\u003e\u003cstrong\u003eEvent registration system\u003c\/strong\u003e for local running club with admin panel.\u003c\/p\u003e",
+    "inLanguage": "en-gb",
+    "url" : "http:\/\/localhost:1313\/projects\/flask-apps\/",
+    "author" : {
+      "@type": "Person",
+      "name": "0xMuler"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-07-20T00:00:00\u002b00:00",
+    "datePublished": "2025-07-20T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-07-20T00:00:00\u002b00:00",
+    
+    "keywords": ["Flask","Python","Full-Stack","cPanel"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "650"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "0x Muler Ml Engineer \u0026 Ai Builder",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/projects/",
+       "name": "Projects",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/categories/full-stack/",
+       "name": "Full-Stack",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Production Flask Web Applications",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="0xMuler" />
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >0xMuler // ML Engineer &amp; AI Builder</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/projects/"
+                  title="Projects"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Projects</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/philosophy/"
+                  title="Development Philosophy &amp; MLOps Practices"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Philosophy</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Production Flask Web Applications
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-20 00:00:00 &#43;0000 UTC">July 20, 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h1 id="production-flask-web-applications" class="relative group">Production Flask Web Applications <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#production-flask-web-applications" aria-label="Anchor">#</a></span></h1><h2 id="full-stack-apps-with-real-users" class="relative group">Full-Stack Apps with Real Users <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#full-stack-apps-with-real-users" aria-label="Anchor">#</a></span></h2><p>Built and deployed <strong>production Flask applications</strong> on cPanel hosting, handling real users with authentication, database integration, and responsive design.</p>
+<h2 id="featured-application-run1events" class="relative group">Featured Application: Run1Events <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#featured-application-run1events" aria-label="Anchor">#</a></span></h2><p><strong>Event registration system</strong> for local running club with admin panel.</p>
+<h3 id="features" class="relative group">Features <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#features" aria-label="Anchor">#</a></span></h3><p>✅ <strong>User Registration</strong> — Collect participant details<br>
+✅ <strong>Authentication</strong> — Admin login with session management<br>
+✅ <strong>Database</strong> — PostgreSQL for structured data<br>
+✅ <strong>Admin Panel</strong> — Manage registrations, export to Excel<br>
+✅ <strong>Email Notifications</strong> — Flask-Mail for confirmations<br>
+✅ <strong>Responsive Design</strong> — Mobile-first CSS</p>
+<h3 id="tech-stack" class="relative group">Tech Stack <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tech-stack" aria-label="Anchor">#</a></span></h3><ul>
+<li><strong>Flask</strong> — Web framework</li>
+<li><strong>PostgreSQL</strong> — Relational database</li>
+<li><strong>SQLAlchemy</strong> — ORM for database</li>
+<li><strong>Flask-Login</strong> — User session management</li>
+<li><strong>Flask-Mail</strong> — Email sending</li>
+<li><strong>WTForms</strong> — Form validation</li>
+<li><strong>Bootstrap</strong> — Responsive UI</li>
+<li><strong>cPanel</strong> — Production hosting</li>
+</ul>
+<h2 id="architecture" class="relative group">Architecture <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#architecture" aria-label="Anchor">#</a></span></h2><pre tabindex="0"><code>User Request
+    ↓
+Nginx (Reverse Proxy)
+    ↓
+Flask App (WSGI)
+    ↓
+SQLAlchemy ORM
+    ↓
+PostgreSQL Database
+</code></pre><h2 id="code-highlights" class="relative group">Code Highlights <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#code-highlights" aria-label="Anchor">#</a></span></h2><h3 id="user-authentication" class="relative group">User Authentication <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#user-authentication" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> flask_login <span style="color:#ff79c6">import</span> LoginManager, login_user, login_required
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>login_manager <span style="color:#ff79c6">=</span> LoginManager()
+</span></span><span style="display:flex;"><span>login_manager<span style="color:#ff79c6">.</span>init_app(app)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.route(<span style="color:#f1fa8c">&#39;/login&#39;</span>, methods<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#39;POST&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">login</span>():
+</span></span><span style="display:flex;"><span>    username <span style="color:#ff79c6">=</span> request<span style="color:#ff79c6">.</span>form[<span style="color:#f1fa8c">&#39;username&#39;</span>]
+</span></span><span style="display:flex;"><span>    password <span style="color:#ff79c6">=</span> request<span style="color:#ff79c6">.</span>form[<span style="color:#f1fa8c">&#39;password&#39;</span>]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    user <span style="color:#ff79c6">=</span> User<span style="color:#ff79c6">.</span>query<span style="color:#ff79c6">.</span>filter_by(username<span style="color:#ff79c6">=</span>username)<span style="color:#ff79c6">.</span>first()
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> user <span style="color:#ff79c6">and</span> check_password_hash(user<span style="color:#ff79c6">.</span>password, password):
+</span></span><span style="display:flex;"><span>        login_user(user)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> redirect(url_for(<span style="color:#f1fa8c">&#39;admin&#39;</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#39;Invalid credentials&#39;</span>, <span style="color:#bd93f9">401</span>
+</span></span></code></pre></div><h3 id="database-models" class="relative group">Database Models <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#database-models" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> flask_sqlalchemy <span style="color:#ff79c6">import</span> SQLAlchemy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>db <span style="color:#ff79c6">=</span> SQLAlchemy()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Registration</span>(db<span style="color:#ff79c6">.</span>Model):
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">id</span> <span style="color:#ff79c6">=</span> db<span style="color:#ff79c6">.</span>Column(db<span style="color:#ff79c6">.</span>Integer, primary_key<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>)
+</span></span><span style="display:flex;"><span>    name <span style="color:#ff79c6">=</span> db<span style="color:#ff79c6">.</span>Column(db<span style="color:#ff79c6">.</span>String(<span style="color:#bd93f9">100</span>), nullable<span style="color:#ff79c6">=</span><span style="color:#ff79c6">False</span>)
+</span></span><span style="display:flex;"><span>    email <span style="color:#ff79c6">=</span> db<span style="color:#ff79c6">.</span>Column(db<span style="color:#ff79c6">.</span>String(<span style="color:#bd93f9">120</span>), unique<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>)
+</span></span><span style="display:flex;"><span>    phone <span style="color:#ff79c6">=</span> db<span style="color:#ff79c6">.</span>Column(db<span style="color:#ff79c6">.</span>String(<span style="color:#bd93f9">20</span>))
+</span></span><span style="display:flex;"><span>    event <span style="color:#ff79c6">=</span> db<span style="color:#ff79c6">.</span>Column(db<span style="color:#ff79c6">.</span>String(<span style="color:#bd93f9">50</span>))
+</span></span><span style="display:flex;"><span>    created_at <span style="color:#ff79c6">=</span> db<span style="color:#ff79c6">.</span>Column(db<span style="color:#ff79c6">.</span>DateTime, default<span style="color:#ff79c6">=</span>datetime<span style="color:#ff79c6">.</span>utcnow)
+</span></span></code></pre></div><h3 id="form-validation" class="relative group">Form Validation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#form-validation" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> wtforms <span style="color:#ff79c6">import</span> StringField, validators
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">RegistrationForm</span>(FlaskForm):
+</span></span><span style="display:flex;"><span>    name <span style="color:#ff79c6">=</span> StringField(<span style="color:#f1fa8c">&#39;Name&#39;</span>, [
+</span></span><span style="display:flex;"><span>        validators<span style="color:#ff79c6">.</span>DataRequired(),
+</span></span><span style="display:flex;"><span>        validators<span style="color:#ff79c6">.</span>Length(<span style="color:#8be9fd;font-style:italic">min</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>, <span style="color:#8be9fd;font-style:italic">max</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">100</span>)
+</span></span><span style="display:flex;"><span>    ])
+</span></span><span style="display:flex;"><span>    email <span style="color:#ff79c6">=</span> EmailField(<span style="color:#f1fa8c">&#39;Email&#39;</span>, [
+</span></span><span style="display:flex;"><span>        validators<span style="color:#ff79c6">.</span>DataRequired(),
+</span></span><span style="display:flex;"><span>        validators<span style="color:#ff79c6">.</span>Email()
+</span></span><span style="display:flex;"><span>    ])
+</span></span><span style="display:flex;"><span>    phone <span style="color:#ff79c6">=</span> StringField(<span style="color:#f1fa8c">&#39;Phone&#39;</span>, [
+</span></span><span style="display:flex;"><span>        validators<span style="color:#ff79c6">.</span>Regexp(<span style="color:#f1fa8c">r</span><span style="color:#f1fa8c">&#39;^\+?1?\d{9,15}$&#39;</span>)
+</span></span><span style="display:flex;"><span>    ])
+</span></span></code></pre></div><h2 id="deployment-on-cpanel" class="relative group">Deployment on cPanel <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#deployment-on-cpanel" aria-label="Anchor">#</a></span></h2><h3 id="challenges" class="relative group">Challenges <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenges" aria-label="Anchor">#</a></span></h3><ol>
+<li><strong>Python Version Mismatch</strong> — cPanel default vs app requirements</li>
+<li><strong>Process Limits</strong> — LSAPI children constraints</li>
+<li><strong>Static Files</strong> — Nginx configuration</li>
+<li><strong>Email SMTP</strong> — Authentication setup</li>
+</ol>
+<h3 id="solutions" class="relative group">Solutions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solutions" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># Virtual environment with correct Python</span>
+</span></span><span style="display:flex;"><span>python3.10 -m venv venv
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">source</span> venv/bin/activate
+</span></span><span style="display:flex;"><span>pip install -r requirements.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Passenger WSGI configuration</span>
+</span></span><span style="display:flex;"><span>passenger_enabled on
+</span></span><span style="display:flex;"><span>passenger_python /home/user/venv/bin/python
+</span></span></code></pre></div><h2 id="production-metrics" class="relative group">Production Metrics <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#production-metrics" aria-label="Anchor">#</a></span></h2><p>📊 <strong>210+ registered users</strong> across multiple events<br>
+📊 <strong>99.5% uptime</strong> over 6 months<br>
+📊 <strong>&lt;500ms average response time</strong><br>
+📊 <strong>Zero data loss</strong> incidents<br>
+📊 <strong>100% email delivery rate</strong> (MailerSend SMTP)</p>
+<h2 id="features-in-detail" class="relative group">Features in Detail <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#features-in-detail" aria-label="Anchor">#</a></span></h2><h3 id="admin-panel" class="relative group">Admin Panel <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#admin-panel" aria-label="Anchor">#</a></span></h3><p><strong>Capabilities</strong>:</p>
+<ul>
+<li>View all registrations (sortable table)</li>
+<li>Search/filter by event, date, name</li>
+<li>Export to Excel (pandas + openpyxl)</li>
+<li>Delete/edit registrations</li>
+<li>Send bulk emails</li>
+</ul>
+<h3 id="email-system" class="relative group">Email System <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#email-system" aria-label="Anchor">#</a></span></h3><p><strong>Automated Emails</strong>:</p>
+<ul>
+<li>Registration confirmation</li>
+<li>Event reminders (1 day before)</li>
+<li>Admin notifications for new registrations</li>
+</ul>
+<p><strong>Configuration</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>app<span style="color:#ff79c6">.</span>config[<span style="color:#f1fa8c">&#39;MAIL_SERVER&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;smtp.mailersend.net&#39;</span>
+</span></span><span style="display:flex;"><span>app<span style="color:#ff79c6">.</span>config[<span style="color:#f1fa8c">&#39;MAIL_PORT&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">587</span>
+</span></span><span style="display:flex;"><span>app<span style="color:#ff79c6">.</span>config[<span style="color:#f1fa8c">&#39;MAIL_USE_TLS&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">True</span>
+</span></span><span style="display:flex;"><span>app<span style="color:#ff79c6">.</span>config[<span style="color:#f1fa8c">&#39;MAIL_USERNAME&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;MS_xxx&#39;</span>
+</span></span><span style="display:flex;"><span>app<span style="color:#ff79c6">.</span>config[<span style="color:#f1fa8c">&#39;MAIL_PASSWORD&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;MS_yyy&#39;</span>
+</span></span></code></pre></div><h3 id="database-migrations" class="relative group">Database Migrations <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#database-migrations" aria-label="Anchor">#</a></span></h3><p>Using Flask-Migrate (Alembic):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flask db init
+</span></span><span style="display:flex;"><span>flask db migrate -m <span style="color:#f1fa8c">&#34;Add phone field&#34;</span>
+</span></span><span style="display:flex;"><span>flask db upgrade
+</span></span></code></pre></div><h2 id="security-features" class="relative group">Security Features <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#security-features" aria-label="Anchor">#</a></span></h2><p>✅ <strong>CSRF Protection</strong> — WTForms tokens<br>
+✅ <strong>Password Hashing</strong> — bcrypt (Werkzeug)<br>
+✅ <strong>SQL Injection Prevention</strong> — SQLAlchemy ORM<br>
+✅ <strong>XSS Protection</strong> — Jinja2 auto-escaping<br>
+✅ <strong>HTTPS</strong> — SSL certificate (Let&rsquo;s Encrypt)</p>
+<h2 id="responsive-design" class="relative group">Responsive Design <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#responsive-design" aria-label="Anchor">#</a></span></h2><p><strong>Mobile-First CSS</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#ff79c6">media</span> <span style="color:#ff79c6">(</span><span style="color:#ff79c6">max-width</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">768px</span><span style="color:#ff79c6">)</span> {
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">registration-form</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">16</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">table</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">block</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">overflow-x</span>: <span style="color:#ff79c6">auto</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="error-handling" class="relative group">Error Handling <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#error-handling" aria-label="Anchor">#</a></span></h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>@app.errorhandler(<span style="color:#bd93f9">404</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">not_found</span>(e):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> render_template(<span style="color:#f1fa8c">&#39;404.html&#39;</span>), <span style="color:#bd93f9">404</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.errorhandler(<span style="color:#bd93f9">500</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">server_error</span>(e):
+</span></span><span style="display:flex;"><span>    app<span style="color:#ff79c6">.</span>logger<span style="color:#ff79c6">.</span>error(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#39;Server Error: </span><span style="color:#f1fa8c">{</span>e<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> render_template(<span style="color:#f1fa8c">&#39;500.html&#39;</span>), <span style="color:#bd93f9">500</span>
+</span></span></code></pre></div><h2 id="debugging-production-issues" class="relative group">Debugging Production Issues <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#debugging-production-issues" aria-label="Anchor">#</a></span></h2><p><strong>Challenges Faced</strong>:</p>
+<ol>
+<li><strong>Email SMTP failures</strong> → Switch from Flask-Mail to MailerSend API</li>
+<li><strong>Process crashes</strong> → Passenger configuration tuning</li>
+<li><strong>Template errors</strong> → Jinja2 undefined variable handling</li>
+<li><strong>Caching issues</strong> → Browser cache busting with versioned assets</li>
+</ol>
+<h2 id="github-repository" class="relative group">GitHub Repository <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#github-repository" aria-label="Anchor">#</a></span></h2><p>📂 <strong><a href="https://github.com/0xmuler/run1events" target="_blank" rel="noreferrer">View Source Code →</a></strong></p>
+<p><strong>Note</strong>: Production credentials removed, <code>.env.example</code> provided</p>
+<h2 id="key-learnings" class="relative group">Key Learnings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#key-learnings" aria-label="Anchor">#</a></span></h2><ol>
+<li><strong>Production ≠ localhost</strong> — Different Python versions, configs</li>
+<li><strong>cPanel has quirks</strong> — Passenger, process limits, caching</li>
+<li><strong>Email is hard</strong> — SMTP auth, deliverability, spam filters</li>
+<li><strong>Users find bugs</strong> — Real usage reveals edge cases</li>
+<li><strong>Monitoring matters</strong> — Logs saved debugging time</li>
+</ol>
+<h2 id="best-practices-applied" class="relative group">Best Practices Applied <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#best-practices-applied" aria-label="Anchor">#</a></span></h2><p>✅ <strong>Environment Variables</strong> — <code>.env</code> for secrets (python-dotenv)<br>
+✅ <strong>Logging</strong> — Flask logger for debugging<br>
+✅ <strong>Git Workflow</strong> — Feature branches, clean commits<br>
+✅ <strong>Documentation</strong> — README with setup instructions<br>
+✅ <strong>Testing</strong> — pytest for routes and forms</p>
+<h2 id="future-enhancements" class="relative group">Future Enhancements <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#future-enhancements" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>API</strong> — REST API for mobile app</li>
+<li><strong>Payment Integration</strong> — Stripe for event fees</li>
+<li><strong>QR Codes</strong> — Check-in system at events</li>
+<li><strong>Analytics</strong> — Dashboard with registration stats</li>
+<li><strong>Multi-language</strong> — Flask-Babel for i18n</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          0xMuler
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">ML Engineer building production AI systems. Specializing in MLOps, LLM engineering, and end-to-end ML pipelines.</div>
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/projects/python-collection/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >CS50P Python Projects Collection</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-08-05 00:00:00 &#43;0000 UTC">August 5, 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            0xMuler
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

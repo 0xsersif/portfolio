@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    
+      <url>
+            <loc>http://localhost:1313/</loc>
+            <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/llm-evaluation/</loc>
+            <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/</loc>
+            <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/multi-agent-workflow/</loc>
+            <lastmod>2026-01-25T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/llm-finetuning/</loc>
+            <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/rag-system/</loc>
+            <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/realtime-recommender/</loc>
+            <lastmod>2025-12-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/cv-edge-deployment/</loc>
+            <lastmod>2025-11-20T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/time-series-forecasting/</loc>
+            <lastmod>2025-10-15T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/go-todo-app/</loc>
+            <lastmod>2025-09-10T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/python-collection/</loc>
+            <lastmod>2025-08-05T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/projects/flask-apps/</loc>
+            <lastmod>2025-07-20T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/about/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/philosophy/</loc>
+          </url>
+    
+  
+</urlset>

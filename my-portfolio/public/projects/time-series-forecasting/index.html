@@ -1,0 +1,810 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en-gb"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Business Time-Series Forecasting &middot; 0xMuler // ML Engineer & AI Builder</title>
+    <meta name="title" content="Business Time-Series Forecasting &middot; 0xMuler // ML Engineer & AI Builder" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.b03e5259dac2760f0e3006bed7d970a363f24345198646bec6dbd9d2fb966a12.css"
+    integrity="sha256-sD5SWdrCdg8OMAa&#43;19lwo2PyQ0UZhka&#43;xtvZ0vuWahI="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.167efd96c29259046e711c52c0db66536f497aad73a774cd6f28fc408f2d2688.js"
+      integrity="sha256-Fn79lsKSWQRucRxSwNtmU29Jeq1zp3TNbyj8QI8tJog="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      Demand and stock price forecasting using XGBoost and GRU with business impact focus
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/projects/time-series-forecasting/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/projects/time-series-forecasting/">
+  <meta property="og:site_name" content="0xMuler // ML Engineer & AI Builder">
+  <meta property="og:title" content="Business Time-Series Forecasting">
+  <meta property="og:description" content="Demand and stock price forecasting using XGBoost and GRU with business impact focus">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-10-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-15T00:00:00+00:00">
+    <meta property="article:tag" content="Time Series">
+    <meta property="article:tag" content="Forecasting">
+    <meta property="article:tag" content="XGBoost">
+    <meta property="article:tag" content="GRU">
+    <meta property="article:tag" content="MLOps">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Business Time-Series Forecasting">
+  <meta name="twitter:description" content="Demand and stock price forecasting using XGBoost and GRU with business impact focus">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Projects",
+    "name": "Business Time-Series Forecasting",
+    "headline": "Business Time-Series Forecasting",
+    "description": "Demand and stock price forecasting using XGBoost and GRU with business impact focus",
+    "abstract": "\u003ch1 id=\u0022business-time-series-forecasting\u0022 class=\u0022relative group\u0022\u003eBusiness Time-Series Forecasting \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#business-time-series-forecasting\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h1\u003e\u003ch2 id=\u0022project-overview\u0022 class=\u0022relative group\u0022\u003eProject Overview \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#project-overview\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cp\u003eBuild accurate \u003cstrong\u003edemand and stock price forecasting\u003c\/strong\u003e models using both classical ML (XGBoost) and deep learning (GRU), focusing on \u003cstrong\u003efeature engineering\u003c\/strong\u003e and \u003cstrong\u003emeasurable business impact\u003c\/strong\u003e.\u003c\/p\u003e\n\u003ch2 id=\u0022use-cases\u0022 class=\u0022relative group\u0022\u003eUse Cases \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#use-cases\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003ch3 id=\u00221-retail-demand-forecasting\u0022 class=\u0022relative group\u0022\u003e1. Retail Demand Forecasting \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#1-retail-demand-forecasting\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h3\u003e\u003cp\u003e\u003cstrong\u003eGoal\u003c\/strong\u003e: Predict product demand 7 days ahead to optimize inventory\u003c\/p\u003e",
+    "inLanguage": "en-gb",
+    "url" : "http:\/\/localhost:1313\/projects\/time-series-forecasting\/",
+    "author" : {
+      "@type": "Person",
+      "name": "0xMuler"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-10-15T00:00:00\u002b00:00",
+    "datePublished": "2025-10-15T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-10-15T00:00:00\u002b00:00",
+    
+    "keywords": ["Time Series","Forecasting","XGBoost","GRU","MLOps"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "776"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "0x Muler Ml Engineer \u0026 Ai Builder",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/projects/",
+       "name": "Projects",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/categories/core-ml-engineering/",
+       "name": "Core ML Engineering",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Business Time Series Forecasting",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="0xMuler" />
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >0xMuler // ML Engineer &amp; AI Builder</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/projects/"
+                  title="Projects"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Projects</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/philosophy/"
+                  title="Development Philosophy &amp; MLOps Practices"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Philosophy</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Business Time-Series Forecasting
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-10-15 00:00:00 &#43;0000 UTC">October 15, 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h1 id="business-time-series-forecasting" class="relative group">Business Time-Series Forecasting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#business-time-series-forecasting" aria-label="Anchor">#</a></span></h1><h2 id="project-overview" class="relative group">Project Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#project-overview" aria-label="Anchor">#</a></span></h2><p>Build accurate <strong>demand and stock price forecasting</strong> models using both classical ML (XGBoost) and deep learning (GRU), focusing on <strong>feature engineering</strong> and <strong>measurable business impact</strong>.</p>
+<h2 id="use-cases" class="relative group">Use Cases <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#use-cases" aria-label="Anchor">#</a></span></h2><h3 id="1-retail-demand-forecasting" class="relative group">1. Retail Demand Forecasting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-retail-demand-forecasting" aria-label="Anchor">#</a></span></h3><p><strong>Goal</strong>: Predict product demand 7 days ahead to optimize inventory</p>
+<p><strong>Business Impact</strong>: Reduce inventory costs, prevent stockouts</p>
+<h3 id="2-stock-price-prediction" class="relative group">2. Stock Price Prediction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-stock-price-prediction" aria-label="Anchor">#</a></span></h3><p><strong>Goal</strong>: Forecast daily closing prices for portfolio optimization</p>
+<p><strong>Business Impact</strong>: Inform trading decisions, risk management</p>
+<h2 id="why-time-series-is-hard" class="relative group">Why Time-Series is Hard <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#why-time-series-is-hard" aria-label="Anchor">#</a></span></h2><p>❌ <strong>Autocorrelation</strong> — Past values influence future<br>
+❌ <strong>Seasonality</strong> — Weekly, monthly, yearly patterns<br>
+❌ <strong>Trend</strong> — Long-term direction<br>
+❌ <strong>Exogenous variables</strong> — External factors (holidays, weather, news)<br>
+❌ <strong>Non-stationarity</strong> — Statistical properties change over time</p>
+<h2 id="approach-1-xgboost-classical-ml" class="relative group">Approach 1: XGBoost (Classical ML) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-1-xgboost-classical-ml" aria-label="Anchor">#</a></span></h2><h3 id="feature-engineering" class="relative group">Feature Engineering <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#feature-engineering" aria-label="Anchor">#</a></span></h3><p><strong>Lag Features</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;lag_1&#39;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;demand&#39;</span>]<span style="color:#ff79c6">.</span>shift(<span style="color:#bd93f9">1</span>)  <span style="color:#6272a4"># Yesterday</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;lag_7&#39;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;demand&#39;</span>]<span style="color:#ff79c6">.</span>shift(<span style="color:#bd93f9">7</span>)  <span style="color:#6272a4"># Week ago</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;lag_30&#39;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;demand&#39;</span>]<span style="color:#ff79c6">.</span>shift(<span style="color:#bd93f9">30</span>) <span style="color:#6272a4"># Month ago</span>
+</span></span></code></pre></div><p><strong>Rolling Statistics</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;rolling_mean_7&#39;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;demand&#39;</span>]<span style="color:#ff79c6">.</span>rolling(<span style="color:#bd93f9">7</span>)<span style="color:#ff79c6">.</span>mean()
+</span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;rolling_std_7&#39;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;demand&#39;</span>]<span style="color:#ff79c6">.</span>rolling(<span style="color:#bd93f9">7</span>)<span style="color:#ff79c6">.</span>std()
+</span></span></code></pre></div><p><strong>Date Features</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;day_of_week&#39;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;date&#39;</span>]<span style="color:#ff79c6">.</span>dt<span style="color:#ff79c6">.</span>dayofweek
+</span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;month&#39;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;date&#39;</span>]<span style="color:#ff79c6">.</span>dt<span style="color:#ff79c6">.</span>month
+</span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;is_weekend&#39;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;day_of_week&#39;</span>]<span style="color:#ff79c6">.</span>isin([<span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">6</span>])
+</span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;is_holiday&#39;</span>] <span style="color:#ff79c6">=</span> df[<span style="color:#f1fa8c">&#39;date&#39;</span>]<span style="color:#ff79c6">.</span>isin(holidays)
+</span></span></code></pre></div><p><strong>Domain Features</strong> (for retail):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;days_since_promotion&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">...</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;competitor_price_ratio&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">...</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#f1fa8c">&#39;weather_temp&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">...</span>  <span style="color:#6272a4"># From API</span>
+</span></span></code></pre></div><h3 id="xgboost-model" class="relative group">XGBoost Model <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#xgboost-model" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> xgboost <span style="color:#ff79c6">as</span> xgb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>model <span style="color:#ff79c6">=</span> xgb<span style="color:#ff79c6">.</span>XGBRegressor(
+</span></span><span style="display:flex;"><span>    n_estimators<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1000</span>,
+</span></span><span style="display:flex;"><span>    learning_rate<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.01</span>,
+</span></span><span style="display:flex;"><span>    max_depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">5</span>,
+</span></span><span style="display:flex;"><span>    early_stopping_rounds<span style="color:#ff79c6">=</span><span style="color:#bd93f9">50</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>model<span style="color:#ff79c6">.</span>fit(
+</span></span><span style="display:flex;"><span>    X_train, y_train,
+</span></span><span style="display:flex;"><span>    eval_set<span style="color:#ff79c6">=</span>[(X_val, y_val)],
+</span></span><span style="display:flex;"><span>    verbose<span style="color:#ff79c6">=</span><span style="color:#bd93f9">100</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><strong>Hyperparameter Tuning</strong>: Optuna for 100 trials</p>
+<h3 id="results-retail-demand" class="relative group">Results (Retail Demand) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#results-retail-demand" aria-label="Anchor">#</a></span></h3><ul>
+<li><strong>MAPE</strong>: 8.5% (Mean Absolute Percentage Error)</li>
+<li><strong>R²</strong>: 0.89</li>
+<li><strong>Business Impact</strong>: <strong>18% reduction in inventory costs</strong></li>
+</ul>
+<h2 id="approach-2-gru-deep-learning" class="relative group">Approach 2: GRU (Deep Learning) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-2-gru-deep-learning" aria-label="Anchor">#</a></span></h2><h3 id="architecture" class="relative group">Architecture <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#architecture" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> torch.nn <span style="color:#ff79c6">as</span> nn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">GRUForecaster</span>(nn<span style="color:#ff79c6">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">__init__</span>(<span style="font-style:italic">self</span>, input_dim, hidden_dim, num_layers):
+</span></span><span style="display:flex;"><span>        <span style="color:#8be9fd;font-style:italic">super</span>()<span style="color:#ff79c6">.</span><span style="color:#50fa7b">__init__</span>()
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>gru <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>GRU(input_dim, hidden_dim, num_layers, 
+</span></span><span style="display:flex;"><span>                          batch_first<span style="color:#ff79c6">=</span><span style="color:#ff79c6">True</span>, dropout<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.2</span>)
+</span></span><span style="display:flex;"><span>        <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>fc <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>Linear(hidden_dim, <span style="color:#bd93f9">1</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">forward</span>(<span style="font-style:italic">self</span>, x):
+</span></span><span style="display:flex;"><span>        out, _ <span style="color:#ff79c6">=</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>gru(x)
+</span></span><span style="display:flex;"><span>        out <span style="color:#ff79c6">=</span> <span style="font-style:italic">self</span><span style="color:#ff79c6">.</span>fc(out[:, <span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>, :])  <span style="color:#6272a4"># Last timestep</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> out
+</span></span></code></pre></div><p><strong>Sequence Window</strong>: 30 days input → 1 day output</p>
+<h3 id="training" class="relative group">Training <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#training" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>optimizer <span style="color:#ff79c6">=</span> torch<span style="color:#ff79c6">.</span>optim<span style="color:#ff79c6">.</span>Adam(model<span style="color:#ff79c6">.</span>parameters(), lr<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.001</span>)
+</span></span><span style="display:flex;"><span>criterion <span style="color:#ff79c6">=</span> nn<span style="color:#ff79c6">.</span>MSELoss()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> epoch <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">100</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> batch <span style="color:#ff79c6">in</span> train_loader:
+</span></span><span style="display:flex;"><span>        pred <span style="color:#ff79c6">=</span> model(batch[<span style="color:#f1fa8c">&#39;X&#39;</span>])
+</span></span><span style="display:flex;"><span>        loss <span style="color:#ff79c6">=</span> criterion(pred, batch[<span style="color:#f1fa8c">&#39;y&#39;</span>])
+</span></span><span style="display:flex;"><span>        loss<span style="color:#ff79c6">.</span>backward()
+</span></span><span style="display:flex;"><span>        optimizer<span style="color:#ff79c6">.</span>step()
+</span></span></code></pre></div><p><strong>Regularization</strong>:</p>
+<ul>
+<li>Dropout (0.2)</li>
+<li>Early stopping</li>
+<li>Learning rate scheduling</li>
+</ul>
+<h3 id="results-stock-prices" class="relative group">Results (Stock Prices) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#results-stock-prices" aria-label="Anchor">#</a></span></h3><ul>
+<li><strong>RMSE</strong>: $3.2 (mean stock price $150)</li>
+<li><strong>Direction Accuracy</strong>: 62% (up/down prediction)</li>
+</ul>
+<h2 id="tech-stack" class="relative group">Tech Stack <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tech-stack" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Python</strong> — Core language</li>
+<li><strong>XGBoost</strong> — Gradient boosting</li>
+<li><strong>PyTorch</strong> — Deep learning framework</li>
+<li><strong>pandas</strong> — Data manipulation</li>
+<li><strong>NumPy</strong> — Numerical operations</li>
+<li><strong>Optuna</strong> — Hyperparameter optimization</li>
+<li><strong>MLflow</strong> — Experiment tracking</li>
+<li><strong>FastAPI</strong> — Prediction API</li>
+<li><strong>Docker</strong> — Containerization</li>
+</ul>
+<h2 id="production-deployment" class="relative group">Production Deployment <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#production-deployment" aria-label="Anchor">#</a></span></h2><h3 id="inference-api-fastapi" class="relative group">Inference API (FastAPI) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#inference-api-fastapi" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> fastapi <span style="color:#ff79c6">import</span> FastAPI
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> joblib
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#ff79c6">=</span> FastAPI()
+</span></span><span style="display:flex;"><span>model <span style="color:#ff79c6">=</span> joblib<span style="color:#ff79c6">.</span>load(<span style="color:#f1fa8c">&#34;xgboost_demand.pkl&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@app.post(<span style="color:#f1fa8c">&#34;/predict&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">predict</span>(features: <span style="color:#8be9fd;font-style:italic">dict</span>):
+</span></span><span style="display:flex;"><span>    X <span style="color:#ff79c6">=</span> preprocess(features)
+</span></span><span style="display:flex;"><span>    pred <span style="color:#ff79c6">=</span> model<span style="color:#ff79c6">.</span>predict(X)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> {<span style="color:#f1fa8c">&#34;demand_forecast&#34;</span>: pred[<span style="color:#bd93f9">0</span>]}
+</span></span></code></pre></div><h3 id="docker-container" class="relative group">Docker Container <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#docker-container" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#ff79c6">FROM</span> <span style="color:#f1fa8c">python:3.10-slim</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">COPY</span> requirements.txt .
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">RUN</span> pip install -r requirements.txt
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">COPY</span> . /app
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">CMD</span> [<span style="color:#f1fa8c">&#34;uvicorn&#34;</span>, <span style="color:#f1fa8c">&#34;app:app&#34;</span>, <span style="color:#f1fa8c">&#34;--host&#34;</span>, <span style="color:#f1fa8c">&#34;0.0.0.0&#34;</span>]
+</span></span></code></pre></div><h3 id="monitoring" class="relative group">Monitoring <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#monitoring" aria-label="Anchor">#</a></span></h3><p>Track model performance in production:</p>
+<ul>
+<li><strong>MAPE drift</strong> — Alert if &gt;15% for 3 days</li>
+<li><strong>Prediction distribution</strong> — Detect anomalies</li>
+<li><strong>Inference latency</strong> — P95 &lt; 100ms</li>
+</ul>
+<h2 id="business-impact" class="relative group">Business Impact <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#business-impact" aria-label="Anchor">#</a></span></h2><h3 id="retail-demand-forecasting" class="relative group">Retail Demand Forecasting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#retail-demand-forecasting" aria-label="Anchor">#</a></span></h3><p>📊 <strong>18% reduction in inventory costs</strong> ($200k savings/year)<br>
+📊 <strong>35% fewer stockouts</strong> (improved customer satisfaction)<br>
+📊 <strong>12% reduction in waste</strong> (perishable goods)</p>
+<p><strong>ROI</strong>: Model development cost ($20k) → $200k annual savings = <strong>10x ROI</strong></p>
+<h3 id="stock-price-forecasting" class="relative group">Stock Price Forecasting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#stock-price-forecasting" aria-label="Anchor">#</a></span></h3><p>📊 <strong>62% directional accuracy</strong> (vs 50% random baseline)<br>
+📊 <strong>8% improvement in Sharpe ratio</strong> for portfolio<br>
+📊 <strong>Risk management</strong> — Identify high-volatility periods</p>
+<h2 id="feature-importance" class="relative group">Feature Importance <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#feature-importance" aria-label="Anchor">#</a></span></h2><p>XGBoost feature importance (retail demand):</p>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>Importance</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>lag_7</strong> (week ago demand)</td>
+          <td>0.35</td>
+      </tr>
+      <tr>
+          <td><strong>rolling_mean_7</strong></td>
+          <td>0.22</td>
+      </tr>
+      <tr>
+          <td><strong>day_of_week</strong></td>
+          <td>0.15</td>
+      </tr>
+      <tr>
+          <td><strong>is_promotion</strong></td>
+          <td>0.12</td>
+      </tr>
+      <tr>
+          <td><strong>temperature</strong></td>
+          <td>0.08</td>
+      </tr>
+      <tr>
+          <td><strong>lag_1</strong></td>
+          <td>0.05</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Insight</strong>: Weekly seasonality dominates, promotions significant</p>
+<h2 id="model-comparison" class="relative group">Model Comparison <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#model-comparison" aria-label="Anchor">#</a></span></h2><table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>MAPE</th>
+          <th>Training Time</th>
+          <th>Inference</th>
+          <th>Interpretability</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Naive (last value)</strong></td>
+          <td>24%</td>
+          <td>0s</td>
+          <td>&lt;1ms</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td><strong>ARIMA</strong></td>
+          <td>15%</td>
+          <td>10min</td>
+          <td>5ms</td>
+          <td>Medium</td>
+      </tr>
+      <tr>
+          <td><strong>XGBoost</strong></td>
+          <td>8.5%</td>
+          <td>30min</td>
+          <td>2ms</td>
+          <td>Medium (SHAP)</td>
+      </tr>
+      <tr>
+          <td><strong>GRU</strong></td>
+          <td>9.2%</td>
+          <td>2hr</td>
+          <td>10ms</td>
+          <td>Low</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Winner</strong>: XGBoost (best accuracy/interpretability tradeoff)</p>
+<h2 id="github-repository" class="relative group">GitHub Repository <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#github-repository" aria-label="Anchor">#</a></span></h2><p>📂 <strong><a href="https://github.com/0xmuler/time-series-forecasting" target="_blank" rel="noreferrer">View Source Code →</a></strong></p>
+<p>Includes:</p>
+<ul>
+<li>Data preprocessing pipelines</li>
+<li>Feature engineering scripts</li>
+<li>XGBoost and GRU model code</li>
+<li>Hyperparameter tuning with Optuna</li>
+<li>MLflow experiment tracking</li>
+<li>FastAPI inference service</li>
+<li>Business impact analysis notebook</li>
+</ul>
+<h2 id="challenges--solutions" class="relative group">Challenges &amp; Solutions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenges--solutions" aria-label="Anchor">#</a></span></h2><table>
+  <thead>
+      <tr>
+          <th>Challenge</th>
+          <th>Solution</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Missing data</strong></td>
+          <td>Forward-fill for short gaps, interpolation for long</td>
+      </tr>
+      <tr>
+          <td><strong>Concept drift</strong></td>
+          <td>Retrain monthly, monitor MAPE drift</td>
+      </tr>
+      <tr>
+          <td><strong>Outliers</strong> (Black Friday)</td>
+          <td>Special handling for holiday periods</td>
+      </tr>
+      <tr>
+          <td><strong>Cold start</strong> (new products)</td>
+          <td>Use similar product patterns</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="key-learnings" class="relative group">Key Learnings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#key-learnings" aria-label="Anchor">#</a></span></h2><ol>
+<li><strong>Feature engineering &gt; model choice</strong> — Good features beat fancy models</li>
+<li><strong>Domain knowledge critical</strong> — Promotions, holidays must be features</li>
+<li><strong>Simpler often better</strong> — XGBoost beat GRU despite less complexity</li>
+<li><strong>Business metrics matter</strong> — MAPE alone doesn&rsquo;t capture inventory costs</li>
+<li><strong>Continuous monitoring</strong> — Models degrade over time, retrain regularly</li>
+</ol>
+<h2 id="evaluation-metrics" class="relative group">Evaluation Metrics <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#evaluation-metrics" aria-label="Anchor">#</a></span></h2><p><strong>Regression Metrics</strong>:</p>
+<ul>
+<li><strong>MAPE</strong>: Mean Absolute Percentage Error (main metric)</li>
+<li><strong>RMSE</strong>: Root Mean Squared Error</li>
+<li><strong>MAE</strong>: Mean Absolute Error</li>
+</ul>
+<p><strong>Business Metrics</strong>:</p>
+<ul>
+<li><strong>Inventory cost reduction</strong></li>
+<li><strong>Stockout rate</strong></li>
+<li><strong>Waste reduction</strong></li>
+</ul>
+<p><strong>Classification</strong> (stock direction):</p>
+<ul>
+<li><strong>Accuracy</strong>: Up/down prediction correctness</li>
+<li><strong>Precision/Recall</strong>: For trading signals</li>
+</ul>
+<h2 id="future-enhancements" class="relative group">Future Enhancements <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#future-enhancements" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Multi-horizon forecasting</strong> — Predict 1, 7, 30 days ahead</li>
+<li><strong>Probabilistic forecasts</strong> — Quantile regression for uncertainty</li>
+<li><strong>Multi-variate</strong> — Forecast multiple products jointly</li>
+<li><strong>External data</strong> — Weather API, news sentiment</li>
+<li><strong>AutoML</strong> — Automated feature engineering and model selection</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          0xMuler
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">ML Engineer building production AI systems. Specializing in MLOps, LLM engineering, and end-to-end ML pipelines.</div>
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/projects/go-todo-app/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Go Todo CLI/Web Tool</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-09-10 00:00:00 &#43;0000 UTC">September 10, 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/projects/cv-edge-deployment/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Computer Vision for Edge Deployment</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-11-20 00:00:00 &#43;0000 UTC">November 20, 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            0xMuler
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

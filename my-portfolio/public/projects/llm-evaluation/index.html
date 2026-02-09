@@ -1,0 +1,727 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en-gb"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>LLM Evaluation Dashboard &middot; 0xMuler // ML Engineer & AI Builder</title>
+    <meta name="title" content="LLM Evaluation Dashboard &middot; 0xMuler // ML Engineer & AI Builder" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.b03e5259dac2760f0e3006bed7d970a363f24345198646bec6dbd9d2fb966a12.css"
+    integrity="sha256-sD5SWdrCdg8OMAa&#43;19lwo2PyQ0UZhka&#43;xtvZ0vuWahI="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="http://localhost:1313/js/main.bundle.min.167efd96c29259046e711c52c0db66536f497aad73a774cd6f28fc408f2d2688.js"
+      integrity="sha256-Fn79lsKSWQRucRxSwNtmU29Jeq1zp3TNbyj8QI8tJog="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      Dashboard for evaluating RAG systems, comparing chunking strategies, and minimizing hallucinations
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/projects/llm-evaluation/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/projects/llm-evaluation/">
+  <meta property="og:site_name" content="0xMuler // ML Engineer & AI Builder">
+  <meta property="og:title" content="LLM Evaluation Dashboard">
+  <meta property="og:description" content="Dashboard for evaluating RAG systems, comparing chunking strategies, and minimizing hallucinations">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2026-01-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-28T00:00:00+00:00">
+    <meta property="article:tag" content="MLOps">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Evaluation">
+    <meta property="article:tag" content="Streamlit">
+    <meta property="article:tag" content="MLflow">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LLM Evaluation Dashboard">
+  <meta name="twitter:description" content="Dashboard for evaluating RAG systems, comparing chunking strategies, and minimizing hallucinations">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Projects",
+    "name": "LLM Evaluation Dashboard",
+    "headline": "LLM Evaluation Dashboard",
+    "description": "Dashboard for evaluating RAG systems, comparing chunking strategies, and minimizing hallucinations",
+    "abstract": "\u003ch1 id=\u0022llm-evaluation-dashboard\u0022 class=\u0022relative group\u0022\u003eLLM Evaluation Dashboard \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#llm-evaluation-dashboard\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h1\u003e\u003ch2 id=\u0022problem-statement\u0022 class=\u0022relative group\u0022\u003eProblem Statement \u003cspan class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100\u0022\u003e\u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022 style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#problem-statement\u0022 aria-label=\u0022Anchor\u0022\u003e#\u003c\/a\u003e\u003c\/span\u003e\u003c\/h2\u003e\u003cp\u003eRAG systems are hard to evaluate. How do you:\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003eCompare different chunking strategies (semantic vs fixed-size)?\u003c\/li\u003e\n\u003cli\u003eMeasure hallucination rates across prompt variations?\u003c\/li\u003e\n\u003cli\u003eA\/B test retrieval methods (dense vs hybrid)?\u003c\/li\u003e\n\u003cli\u003eTrack performance over time?\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003eThis project builds a \u003cstrong\u003ecomprehensive evaluation framework\u003c\/strong\u003e with visual dashboards to systematically improve RAG system quality.\u003c\/p\u003e",
+    "inLanguage": "en-gb",
+    "url" : "http:\/\/localhost:1313\/projects\/llm-evaluation\/",
+    "author" : {
+      "@type": "Person",
+      "name": "0xMuler"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-01-28T00:00:00\u002b00:00",
+    "datePublished": "2026-01-28T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-01-28T00:00:00\u002b00:00",
+    
+    "keywords": ["MLOps","LLM","Evaluation","Streamlit","MLflow"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "710"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "0x Muler Ml Engineer \u0026 Ai Builder",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/projects/",
+       "name": "Projects",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/categories/mlops/",
+       "name": "MLOps",
+       "position": 3
+     },
+     {
+       "@type": "ListItem",
+       "name": "Llm Evaluation Dashboard",
+       "position": 4
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="0xMuler" />
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >0xMuler // ML Engineer &amp; AI Builder</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/projects/"
+                  title="Projects"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Projects</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/philosophy/"
+                  title="Development Philosophy &amp; MLOps Practices"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Philosophy</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              <button id="search-button-m0" title="Search (/)">
+                <span
+                  class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                >
+                  <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+                </span>
+              </button>
+            </li>
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        LLM Evaluation Dashboard
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-01-28 00:00:00 &#43;0000 UTC">January 28, 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h1 id="llm-evaluation-dashboard" class="relative group">LLM Evaluation Dashboard <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#llm-evaluation-dashboard" aria-label="Anchor">#</a></span></h1><h2 id="problem-statement" class="relative group">Problem Statement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problem-statement" aria-label="Anchor">#</a></span></h2><p>RAG systems are hard to evaluate. How do you:</p>
+<ul>
+<li>Compare different chunking strategies (semantic vs fixed-size)?</li>
+<li>Measure hallucination rates across prompt variations?</li>
+<li>A/B test retrieval methods (dense vs hybrid)?</li>
+<li>Track performance over time?</li>
+</ul>
+<p>This project builds a <strong>comprehensive evaluation framework</strong> with visual dashboards to systematically improve RAG system quality.</p>
+<h2 id="architecture" class="relative group">Architecture <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#architecture" aria-label="Anchor">#</a></span></h2><pre tabindex="0"><code>Evaluation Dataset (Golden Q&amp;A Pairs)
+            ↓
+┌───────────┴───────────┐
+│   Test Configurations │
+│ - Chunking: 3 types   │
+│ - Prompts: 5 variants │
+│ - Retrieval: 2 methods│
+└───────────┬───────────┘
+            ↓
+    Run Experiments (MLflow)
+            ↓
+    Compute Metrics
+    - Answer accuracy
+    - Hallucination rate  
+    - Retrieval precision
+    - Latency
+            ↓
+    Streamlit Dashboard
+    (Interactive Comparison)
+</code></pre><h2 id="tech-stack" class="relative group">Tech Stack <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tech-stack" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Streamlit</strong> — Interactive dashboard UI</li>
+<li><strong>MLflow</strong> — Experiment tracking and runs comparison</li>
+<li><strong>LangChain</strong> — RAG system orchestration</li>
+<li><strong>pytest</strong> — Automated evaluation tests</li>
+<li><strong>pandas</strong> — Data manipulation and analysis</li>
+<li><strong>plotly</strong> — Interactive visualizations</li>
+<li><strong>Docker</strong> — Reproducible environment</li>
+</ul>
+<h2 id="evaluation-metrics" class="relative group">Evaluation Metrics <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#evaluation-metrics" aria-label="Anchor">#</a></span></h2><h3 id="1-answer-accuracy" class="relative group">1. Answer Accuracy <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-answer-accuracy" aria-label="Anchor">#</a></span></h3><p>Compare generated answer to golden answer:</p>
+<ul>
+<li><strong>Exact match</strong> — Binary correctness</li>
+<li><strong>BLEU score</strong> — N-gram overlap</li>
+<li><strong>ROUGE score</strong> — Recall-oriented similarity</li>
+<li><strong>Semantic similarity</strong> — Embedding cosine distance</li>
+</ul>
+<h3 id="2-hallucination-detection" class="relative group">2. Hallucination Detection <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-hallucination-detection" aria-label="Anchor">#</a></span></h3><p>Check if answer contains hallucinated information:</p>
+<ul>
+<li><strong>Source attribution</strong> — All facts cite retrieved documents</li>
+<li><strong>Out-of-scope detection</strong> — Correctly says &ldquo;I don&rsquo;t know&rdquo;</li>
+<li><strong>Factual consistency</strong> — NLI model checks answer vs sources</li>
+</ul>
+<h3 id="3-retrieval-quality" class="relative group">3. Retrieval Quality <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-retrieval-quality" aria-label="Anchor">#</a></span></h3><p>Evaluate document retrieval:</p>
+<ul>
+<li><strong>Precision@K</strong> — Relevant docs in top K</li>
+<li><strong>Recall@K</strong> — Coverage of all relevant docs</li>
+<li><strong>MRR (Mean Reciprocal Rank)</strong> — Position of first relevant doc</li>
+<li><strong>Latency</strong> — Time to retrieve + rank documents</li>
+</ul>
+<h2 id="tested-configurations" class="relative group">Tested Configurations <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tested-configurations" aria-label="Anchor">#</a></span></h2><h3 id="chunking-strategies" class="relative group">Chunking Strategies <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#chunking-strategies" aria-label="Anchor">#</a></span></h3><ol>
+<li><strong>Fixed-size</strong> — 512 tokens, 50 token overlap</li>
+<li><strong>Semantic</strong> — Split by paragraph/section headers</li>
+<li><strong>Recursive</strong> — Hierarchical chunking with parent-child</li>
+</ol>
+<h3 id="prompt-variations" class="relative group">Prompt Variations <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#prompt-variations" aria-label="Anchor">#</a></span></h3><ol>
+<li><strong>Zero-shot</strong> — Direct question answering</li>
+<li><strong>Few-shot</strong> — 3 examples in prompt</li>
+<li><strong>Chain-of-thought</strong> — &ldquo;Think step-by-step&hellip;&rdquo;</li>
+<li><strong>Constrained</strong> — &ldquo;Answer using only provided context&rdquo;</li>
+<li><strong>Structured</strong> — JSON output format</li>
+</ol>
+<h3 id="retrieval-methods" class="relative group">Retrieval Methods <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#retrieval-methods" aria-label="Anchor">#</a></span></h3><ol>
+<li><strong>Dense</strong> — Pure embedding similarity (FAISS)</li>
+<li><strong>Hybrid</strong> — Dense + BM25 sparse retrieval</li>
+</ol>
+<h2 id="dashboard-features" class="relative group">Dashboard Features <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dashboard-features" aria-label="Anchor">#</a></span></h2><h3 id="experiment-comparison-view" class="relative group">Experiment Comparison View <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#experiment-comparison-view" aria-label="Anchor">#</a></span></h3><ul>
+<li>Side-by-side metrics for all configurations</li>
+<li>Interactive filters (chunking, prompt, retrieval)</li>
+<li>Sort by any metric (accuracy, latency, etc.)</li>
+</ul>
+<h3 id="hallucination-analysis" class="relative group">Hallucination Analysis <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#hallucination-analysis" aria-label="Anchor">#</a></span></h3><ul>
+<li>Per-question hallucination breakdown</li>
+<li>Examples of hallucinated answers</li>
+<li>Confidence score distribution</li>
+</ul>
+<h3 id="latency-profiling" class="relative group">Latency Profiling <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#latency-profiling" aria-label="Anchor">#</a></span></h3><ul>
+<li>P50, P95, P99 latency percentiles</li>
+<li>Breakdown: retrieval vs generation time</li>
+<li>Identify slow queries</li>
+</ul>
+<h3 id="error-analysis" class="relative group">Error Analysis <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#error-analysis" aria-label="Anchor">#</a></span></h3><ul>
+<li>Failed questions grouped by topic</li>
+<li>Common failure patterns</li>
+<li>Suggested improvements</li>
+</ul>
+<h2 id="results--insights" class="relative group">Results &amp; Insights <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#results--insights" aria-label="Anchor">#</a></span></h2><p>📊 <strong>Semantic chunking improved accuracy by 12%</strong> vs fixed-size<br>
+📊 <strong>Hybrid retrieval reduced hallucinations by 35%</strong><br>
+📊 <strong>Constrained prompts cut hallucination rate from 18% → 6%</strong><br>
+📊 <strong>FAISS optimization reduced latency from 800ms → 400ms</strong></p>
+<h3 id="winning-configuration" class="relative group">Winning Configuration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#winning-configuration" aria-label="Anchor">#</a></span></h3><table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Best Approach</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Chunking</strong></td>
+          <td>Semantic (paragraph boundaries)</td>
+      </tr>
+      <tr>
+          <td><strong>Prompt</strong></td>
+          <td>Constrained + few-shot examples</td>
+      </tr>
+      <tr>
+          <td><strong>Retrieval</strong></td>
+          <td>Hybrid (dense + BM25)</td>
+      </tr>
+      <tr>
+          <td><strong>Top-K</strong></td>
+          <td>5 documents</td>
+      </tr>
+      <tr>
+          <td><strong>Re-ranking</strong></td>
+          <td>Cross-encoder final pass</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Final Metrics</strong>:<br>
+✅ 85% answer accuracy<br>
+✅ 6% hallucination rate<br>
+✅ 420ms average latency</p>
+<h2 id="live-demo" class="relative group">Live Demo <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#live-demo" aria-label="Anchor">#</a></span></h2><p>🚀 <strong><a href="https://0xmuler-llm-eval.streamlit.app" target="_blank" rel="noreferrer">Try the Dashboard on Streamlit Cloud →</a></strong></p>
+<p>Upload your own evaluation dataset and run experiments.</p>
+<h2 id="github-repository" class="relative group">GitHub Repository <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#github-repository" aria-label="Anchor">#</a></span></h2><p>📂 <strong><a href="https://github.com/0xmuler/llm-evaluation-dashboard" target="_blank" rel="noreferrer">View Source Code →</a></strong></p>
+<p>Includes:</p>
+<ul>
+<li>Full evaluation framework</li>
+<li>Golden Q&amp;A dataset (100+ examples)</li>
+<li>MLflow experiment tracking setup</li>
+<li>Streamlit dashboard code</li>
+<li>Automated pytest suite</li>
+<li>Docker Compose for one-command deployment</li>
+</ul>
+<h2 id="example-evaluation-run" class="relative group">Example Evaluation Run <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#example-evaluation-run" aria-label="Anchor">#</a></span></h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">from</span> llm_eval <span style="color:#ff79c6">import</span> RAGEvaluator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>evaluator <span style="color:#ff79c6">=</span> RAGEvaluator(
+</span></span><span style="display:flex;"><span>    dataset<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;golden_qa.json&#34;</span>,
+</span></span><span style="display:flex;"><span>    chunking<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;semantic&#34;</span>,
+</span></span><span style="display:flex;"><span>    prompt_template<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;constrained&#34;</span>,
+</span></span><span style="display:flex;"><span>    retrieval<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;hybrid&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>results <span style="color:#ff79c6">=</span> evaluator<span style="color:#ff79c6">.</span>run()
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Logs to MLflow automatically</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(results<span style="color:#ff79c6">.</span>summary())
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Accuracy: 0.85, Hallucination: 0.06, Latency: 420ms</span>
+</span></span></code></pre></div><h2 id="automated-testing" class="relative group">Automated Testing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#automated-testing" aria-label="Anchor">#</a></span></h2><p>CI/CD pipeline (GitHub Actions) runs on every PR:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- Run evaluation on 20-question smoke test
+</span></span><span style="display:flex;"><span>- Fail if accuracy &lt; 75%
+</span></span><span style="display:flex;"><span>- Fail if hallucination &gt; 10%
+</span></span><span style="display:flex;"><span>- Fail if P95 latency &gt; 1000ms
+</span></span></code></pre></div><h2 id="key-learnings" class="relative group">Key Learnings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#key-learnings" aria-label="Anchor">#</a></span></h2><ol>
+<li><strong>Golden datasets are essential</strong> — Can&rsquo;t improve what you don&rsquo;t measure</li>
+<li><strong>Metrics must match use case</strong> — BLEU ≠ semantic correctness</li>
+<li><strong>Ablation studies reveal insights</strong> — Change one variable at a time</li>
+<li><strong>Latency-quality tradeoffs</strong> — Faster retrieval may hurt accuracy</li>
+<li><strong>Visualizations drive decisions</strong> — Dashboard convinced stakeholders</li>
+</ol>
+<h2 id="challenges--solutions" class="relative group">Challenges &amp; Solutions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenges--solutions" aria-label="Anchor">#</a></span></h2><table>
+  <thead>
+      <tr>
+          <th>Challenge</th>
+          <th>Solution</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Creating golden dataset</strong></td>
+          <td>Hired domain experts for annotation</td>
+      </tr>
+      <tr>
+          <td><strong>Expensive LLM calls</strong></td>
+          <td>Cache LLM responses, use cheaper models for eval</td>
+      </tr>
+      <tr>
+          <td><strong>Evaluation is subjective</strong></td>
+          <td>Multiple annotators, inter-rater agreement</td>
+      </tr>
+      <tr>
+          <td><strong>Complex UI</strong></td>
+          <td>Streamlit with clear filters and tooltips</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="future-enhancements" class="relative group">Future Enhancements <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#future-enhancements" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Multi-modal evaluation</strong> — Test with images, tables, charts</li>
+<li><strong>Adversarial testing</strong> — Inject misleading docs, test robustness</li>
+<li><strong>Online evaluation</strong> — Monitor production queries automatically</li>
+<li><strong>Cost tracking</strong> — Compare configurations by $/1000 queries</li>
+<li><strong>Custom metrics</strong> — Domain-specific evaluation criteria</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          0xMuler
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">ML Engineer building production AI systems. Specializing in MLOps, LLM engineering, and end-to-end ML pipelines.</div>
+      
+      <div class="text-2xl sm:text-lg">
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/projects/multi-agent-workflow/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Multi-Agent AI Workflow System</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-01-25 00:00:00 &#43;0000 UTC">January 25, 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            0xMuler
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>
