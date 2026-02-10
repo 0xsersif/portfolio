@@ -175,7 +175,7 @@ jobs:
 - **Error rate**: Failed recommendations
 
 ### Alerting
-- Latency > 200ms for 5 minutes → PagerDuty
+- Latency > 200ms → PagerDuty
 - Error rate > 1% → Slack notification
 - Kafka lag > 10k messages → Email alert
 

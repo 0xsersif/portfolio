@@ -1,15 +1,36 @@
-baseURL = 'https://0xmuler.github.io/'
+baseURL = 'https://0xsersif.github.io/'
 languageCode = 'en-gb'
-title = '0xMuler // ML Engineer & AI Builder'
+title = '0xsersif // Full-Stack Developer & ML Engineer'
 theme = 'congo'
 enableRobotsTXT = true
+defaultContentLanguage = 'en'
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
+    [languages.en.params]
+      author.name = '0xsersif'
+      author.bio = 'Full-Stack Developer & ML Engineer. Building web applications, websites, and production AI systems. 5+ years self-learning. HTML & CSS certified.'
+  
+  [languages.de]
+    languageName = 'Deutsch'
+    weight = 2
+    [languages.de.params]
+      author.name = '0xsersif'
+      author.bio = 'Full-Stack Entwickler & ML Engineer. Baue Webanwendungen, Websites und Produktions-KI-Systeme. 5+ Jahre Selbstlernen. HTML & CSS zertifiziert. Telc B1 Deutsch.'
 
 [pagination]
   pagerSize = 10
 
 [params]
-  author.name = '0xMuler'
-  author.bio = 'ML Engineer building production AI systems. Specializing in MLOps, LLM engineering, and end-to-end ML pipelines.'
+  languageDirection = 'ltr'
+  
+[params.author]
+  name = '0xsersif'
+  image = 'img/author.jpg'
+  headline = 'Full-Stack Developer & ML Engineer'
+  bio = 'Building web applications, websites, and production AI systems. 5+ years self-learning Python, Go, C. HTML & CSS certified. Telc B1 German. Languages: Arabic (native), French, English, German.'
   colorScheme = 'dark'
   defaultAppearance = 'dark'
   enableSearch = true
@@ -33,6 +54,11 @@ enableRobotsTXT = true
     name = 'Philosophy'
     pageRef = '/philosophy'
     weight = 30
+
+  [[menu.main]]
+    name = 'Self-Learning Path'
+    pageRef = '/self-learning-path'
+    weight = 40
 
 [markup]
   [markup.highlight]

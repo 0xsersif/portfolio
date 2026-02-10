@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Hugo: Run Dev Server",
+			"type": "shell",
+			"command": "cd /Users/br48/Documents/Work/portfolio/my-portfolio && hugo server -D",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    
+      <url>
+            <loc>http://localhost:1313/de/</loc>
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="http://localhost:1313/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="de"
+              href="http://localhost:1313/de/"
+              />
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/de/philosophy/</loc>
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="http://localhost:1313/philosophy/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="de"
+              href="http://localhost:1313/de/philosophy/"
+              />
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/de/projects/</loc>
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="http://localhost:1313/projects/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="de"
+              href="http://localhost:1313/de/projects/"
+              />
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/de/about/</loc>
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="http://localhost:1313/about/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="de"
+              href="http://localhost:1313/de/about/"
+              />
+          </url>
+    
+  
+</urlset>

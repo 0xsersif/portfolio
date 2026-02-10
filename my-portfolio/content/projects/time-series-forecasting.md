@@ -217,10 +217,10 @@ XGBoost feature importance (retail demand):
 
 | Model | MAPE | Training Time | Inference | Interpretability |
 |-------|------|---------------|-----------|------------------|
-| **Naive (last value)** | 24% | 0s | <1ms | High |
-| **ARIMA** | 15% | 10min | 5ms | Medium |
-| **XGBoost** | 8.5% | 30min | 2ms | Medium (SHAP) |
-| **GRU** | 9.2% | 2hr | 10ms | Low |
+| **Naive (last value)** | 24% | <1s | <1ms | High |
+| **ARIMA** | 15% | <1s | 5ms | Medium |
+| **XGBoost** | 8.5% | <1s | 2ms | Medium (SHAP) |
+| **GRU** | 9.2% | <5s | 10ms | Low |
 
 **Winner**: XGBoost (best accuracy/interpretability tradeoff)
 

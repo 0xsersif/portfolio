@@ -9,9 +9,9 @@ A collection of **production-grade ML systems**, **LLM applications**, and **ful
 
 ## Filter by Category
 
-🤖 **MLOps & LLM Engineering** — RAG systems, fine-tuning, multi-agent workflows  
-🔧 **Core ML Engineering** — Recommenders, CV, time-series forecasting  
-💻 **Full-Stack Foundation** — Go, Python, Flask applications
+MLOps & LLM Engineering — RAG systems, fine-tuning, multi-agent workflows  
+Core ML Engineering — Recommenders, CV, time-series forecasting  
+Full-Stack Foundation — Go, Python, Flask applications
 
 ---
 

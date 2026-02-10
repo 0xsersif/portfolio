@@ -3,81 +3,74 @@ title: "About"
 description: "Technical background, core stack, and journey from Networks to ML Engineering"
 ---
 
-# About 0xMuler
+# About 0xsersif
 
-## Core ML Stack
+## Technical Background
 
-**Languages**
-- **Python** — Primary language, certified through CS50P (Harvard)
-- **Go** — For minimal, performant backend tools and CLIs
+I'm a full-stack developer with **5 years of self-directed learning** in Python, Go, and C. I build and ship web applications, websites, and now AI/ML systems. My experience spans frontend, backend, infrastructure, and production deployment.
 
-**ML/AI Frameworks**
-- PyTorch — Deep learning and model training
-- Hugging Face Transformers — LLM development and fine-tuning
-- LangChain / LlamaIndex — RAG systems and LLM orchestration
-- Scikit-learn / XGBoost — Classical ML and boosting
+## Core Technical Stack
 
-**MLOps & Production Tools**
-- **Containerization**: Docker, Docker Compose
-- **Experiment Tracking**: MLflow, Weights & Biases (W&B)
-- **Data Versioning**: DVC (Data Version Control)
-- **Vector Databases**: ChromaDB, Pinecone, FAISS
-- **API Development**: FastAPI, Flask
-- **CI/CD**: GitHub Actions for linting, testing, model deployment
-- **Cloud**: AWS, GCP (deployment and inference)
+**Languages** (5+ years self-learning)
+- **Python** — Backend, ML systems, automation, data processing
+- **Go** — Performant CLI tools and backend services
+- **C** — Systems-level programming and optimization
+- **HTML & CSS** — Certified in web design and responsive layouts
+- **JavaScript** — Frontend development and interactivity
 
-**Traditional Full-Stack**
-- Flask — Web application development
-- Git/GitHub — Professional version control
-- cPanel — Production deployment experience
-- SQL — Data manipulation and querying
+**Web Development**
+- **Frontend**: HTML, CSS, responsive design, modern UI/UX
+- **Backend**: Flask, FastAPI, Node.js
+- **Databases**: MySQL, PostgreSQL, SQL optimization
+- **Full-Stack**: Built and shipped multiple web applications and websites
+
+**Infrastructure & Deployment**
+- **cPanel**: Production deployment, hosting management, domain setup
+- **PHP & MySQL**: Server-side scripting, database administration
+- **Raspberry Pi Self-Hosting**: Running web servers and applications on personal hardware
+- **Docker**: Containerization for consistent deployments
+- **Linux**: Server management, system administration
+
+**ML/AI Stack**
+- **Frameworks**: PyTorch, Hugging Face Transformers, LangChain
+- **MLOps**: Docker, MLflow, Weights & Biases, DVC
+- **Deployment**: FastAPI, Streamlit, Hugging Face Spaces
 
 ## Development Practices
 
-✅ **End-to-End MLOps** — Production pipelines, not just .ipynb notebooks  
-✅ **Live Demos** — Deploy on Hugging Face Spaces, Streamlit Cloud, AWS  
-✅ **Structured Repos** — Professional READMEs, architecture diagrams, setup instructions  
-✅ **Quantified Metrics** — "Reduced latency by 40%", "Improved F1 by 15%"  
-✅ **Real-World Data** — Web scraping, API calls, messy data cleaning  
-✅ **CI/CD Automation** — GitHub Actions for lint, test, deploy  
-✅ **Modern UI/UX** — Dark mode, glassmorphism, responsive design  
-✅ **Technical Writing** — Blogs explaining architectural decisions
+Building Production Systems — End-to-end applications, not just prototypes  
+Shipping Real Code — Deployed websites, apps, and ML systems to production  
+Infrastructure Knowledge — cPanel hosting, Raspberry Pi self-hosting, Docker  
+Learning by Building — Every project solves a real problem  
+Clean Code — Professional structure, documentation, version control  
+Quantified Results — Measurable improvements in performance and user experience
 
-## Additional Skills
+## Experience Highlights
 
-📡 **Networks & Telecommunications** — Professional foundation  
-🤖 **LLM Integration** — Prompt engineering, API usage, fine-tuning  
-🚀 **Deployment** — cPanel, Docker, cloud platforms  
-🔍 **Problem-Solving** — Self-directed debugging, environment setup  
-₿ **Crypto Enthusiast** — Blockchain tools, wallet management
+**Web Applications & Websites**: Built multiple full-stack applications deployed to production with cPanel  
+**Database Design**: MySQL database architecture and optimization for web applications  
+**Server Management**: Configured and maintained web servers on cPanel and Raspberry Pi  
+**Infrastructure**: Self-hosted applications on Raspberry Pi, learned systems-level operations  
+**Frontend to Backend**: Complete understanding of web stack from HTML/CSS to server-side code  
+**ML Engineering**: Extended skills into ML/AI systems while maintaining full-stack foundation
 
 ---
 
-## Education & Learning Path
+## Learning Path
 
-### Formal Training
+**Self-Directed Learning** (5+ years)
+- Python, Go, C: continuous learning through projects
+- Web development: HTML, CSS, JavaScript, backend frameworks
+- Infrastructure: cPanel, hosting, Raspberry Pi self-hosting
+- ML/AI: PyTorch, LangChain, LLM systems (recent focus)
 
-**CS50P (Harvard)** — Introduction to Programming with Python (Certified)  
-Completed Harvard's rigorous Python course covering fundamentals to advanced concepts.
+**Formal Training**
+- Certified in HTML & CSS (Web Design Fundamentals)
+- 1337 School: collaborative learning and problem-solving
+- Networks & Telecommunications: technical foundation
 
-**1337 School** — Python-focused projects and collaborative learning  
-Peer-learning environment emphasizing practical problem-solving.
-
-**Networks/Telecommunications** — Professional background  
-Technical foundation in protocols, connection optimization, and system design.
-
-### Self-Paced Learning
-
-> I believe in **learning by building**. My projects come from real needs, not tutorials.
-
-- Built RAG systems to answer questions from private document sets
-- Fine-tuned LLMs on specialized domains using LoRA/QLoRA
-- Deployed multi-agent AI workflows for automated research
-- Created evaluation dashboards to measure and minimize hallucinations
-- Implemented real-time recommendation systems with Kafka/Spark
-- Optimized YOLO models for edge deployment on Raspberry Pi
-
-I use tools like **Obsidian** for task management and **Git** for tracking every iteration of my work.
+**Current Focus**
+Building production ML systems while leveraging 5+ years of full-stack and infrastructure experience.
 
 ---
 

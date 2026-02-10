@@ -3,6 +3,8 @@ title: "Development Philosophy & MLOps Practices"
 description: "My approach to building production ML systems and shipping quality code"
 ---
 
+
+
 # Development Philosophy
 
 ## I Build Production ML Systems and I Ship
@@ -15,19 +17,19 @@ My philosophy centers on **production-first engineering**, **quantified impact**
 
 ### The Problem with .ipynb Portfolios
 
-❌ **Notebooks are not production code**  
-❌ **No structure, no tests, no deployment**  
-❌ **Can't run in production environments**  
-❌ **Recruiters want to see real systems**
+Notebooks are not production code  
+No structure, no tests, no deployment  
+Can't run in production environments  
+Recruiters want to see real systems
 
 ### The Solution: Structured Repos
 
-✅ **Python modules** with proper imports  
-✅ **FastAPI/Flask** for inference APIs  
-✅ **Docker** for reproducible environments  
-✅ **CI/CD** pipelines with GitHub Actions  
-✅ **Tests** with pytest (>80% coverage)  
-✅ **Monitoring** with MLflow, W&B
+Python modules with proper imports  
+FastAPI/Flask for inference APIs  
+Docker for reproducible environments  
+CI/CD pipelines with GitHub Actions  
+Tests with pytest (>80% coverage)  
+Monitoring with MLflow, W&B
 
 **Example Structure**:
 ```
@@ -57,11 +59,11 @@ Recruiters and hiring managers **don't have time** to clone repos and run code. 
 
 ### Deployment Platforms
 
-🚀 **Hugging Face Spaces** — For LLM/NLP projects  
-🚀 **Streamlit Cloud** — For dashboards and demos  
-🚀 **AWS/GCP** — For scalable production systems  
-🚀 **Docker Hub** — Containerized applications  
-🚀 **GitHub Pages** — Static sites and portfolios
+Hugging Face Spaces — For LLM/NLP projects  
+Streamlit Cloud — For dashboards and demos  
+AWS/GCP — For scalable production systems  
+Docker Hub — Containerized applications  
+GitHub Pages — Static sites and portfolios
 
 ---
 
@@ -69,17 +71,17 @@ Recruiters and hiring managers **don't have time** to clone repos and run code. 
 
 ### Bad: Vague Claims
 
-❌ "Improved model performance"  
-❌ "Built a recommender system"  
-❌ "Optimized the pipeline"
+"Improved model performance"  
+"Built a recommender system"  
+"Optimized the pipeline"
 
 ### Good: Measurable Metrics
 
-✅ **"Reduced latency by 40%"** (800ms → 480ms)  
-✅ **"Improved F1-score by 15%"** (0.72 → 0.83)  
-✅ **"Saved $200k/year"** through inventory optimization  
-✅ **"5x faster inference"** on edge devices  
-✅ **"99.9% uptime"** over 3 months
+**"Reduced latency by 40%"** (800ms → 480ms)  
+**"Improved F1-score by 15%"** (0.72 → 0.83)  
+**"Saved $200k/year"** through inventory optimization  
+**"5x faster inference"** on edge devices  
+**"99.9% uptime"** over 3 months
 
 ### Business Impact
 
@@ -308,7 +310,7 @@ Building toward modern ML engineering standards:
 
 ## Closing Thoughts
 
-> "I Build Production ML Systems and I Ship"
+I Build Production ML Systems and I Ship
 
 This isn't about having the most complex models or latest frameworks. It's about:
 
