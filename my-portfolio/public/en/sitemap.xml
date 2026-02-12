@@ -196,6 +196,22 @@
   
     
       <url>
+            <loc>http://localhost:1313/self-learning-path/</loc>
+            <xhtml:link
+              rel="alternate"
+              hreflang="de"
+              href="http://localhost:1313/de/self-learning-path/"
+              />
+            <xhtml:link
+              rel="alternate"
+              hreflang="en"
+              href="http://localhost:1313/self-learning-path/"
+              />
+          </url>
+    
+  
+    
+      <url>
             <loc>http://localhost:1313/about/</loc>
             <xhtml:link
               rel="alternate"
@@ -223,12 +239,6 @@
               hreflang="en"
               href="http://localhost:1313/philosophy/"
               />
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/self-learning-path/</loc>
           </url>
     
   

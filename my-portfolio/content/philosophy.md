@@ -100,10 +100,8 @@ Always tie technical work to business outcomes.
 ### The Kaggle Trap
 
 Iris, Titanic, MNIST are **overused and unrealistic**:
-- Pre-cleaned data
 - Perfect labels
 - No missing values
-- No distribution shift
 
 ### Show Real Engineering Skills
 
@@ -143,7 +141,6 @@ Data Collection → Preprocessing → Training → Evaluation
 - DVC — Git for data and models
 - LakeFS — Git-like versioning for data lakes
 
-**Containerization**:
 - Docker — Package dependencies
 - Docker Compose — Multi-service apps
 

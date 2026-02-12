@@ -1,7 +1,41 @@
+"0xsersif // Full-Stack Engineer Who Ships"
+"I build real systems used by real users — full-stack apps, infrastructure, and production AI."
 ---
-title: "Self-Learning Path"
-description: "My journey from dropout to developer and the story behind Eclipsis."
+
+# I Build Real Systems. They Get Used.
+
+Full-stack developer and ML engineer from Morocco focused on production-grade engineering — not demos, not tutorials, not theory.
+
+I design, build, deploy, and run real systems used by real users.
+
+**Recent Proof**
+→ Built and launched a race registration platform that processed **800 real registrations** for a live event ([run1events.com](https://run1events.com)) — full stack, database, deployment, and production handling.
+
+## What I Actually Do
+
+**Ship production applications** — not mockups  
+**Deploy real infrastructure** — not localhost projects  
+**Solve real problems** — not portfolio toys  
+
+Stack:
+- Python, Go, C
+- Flask / FastAPI backends
+- MySQL / PostgreSQL databases
+- Docker + Linux servers
+- cPanel + self-hosted infra
+- ML systems + RAG pipelines
+
+## Engineering Principles
+
+- Production > prototypes
+- Metrics > claims
+- Systems > scripts
+- Shipping > talking
+
 ---
+
+**5+ years self-learning by building real systems**  
+Not trained to pass exams — trained to make software work in the real world.
 
 ### Our Philosophy: Scents That Echo Resilience
 
