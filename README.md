@@ -247,5 +247,5 @@ MIT License - feel free to fork and customize!
 
 ## Contact
 
-- **GitHub**: [0xmuler](https://github.com/0xsersif)
+- **X.com**: [0xmuler]
 - **Portfolio**: https://0xsersif.xyz
